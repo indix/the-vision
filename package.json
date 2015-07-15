@@ -1,0 +1,49 @@
+{
+  "name": "the-vision",
+  "version": "0.1.0",
+  "description": "A set of reusable UI(react) components",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ind9/the-vision.git"
+  },
+  "keywords": [
+    "react",
+    "material-ui",
+    "ui-components"
+  ],
+  "author": "Bharath",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ind9/the-vision/issues"
+  },
+  "homepage": "https://github.com/ind9/the-vision",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.4",
+    "classnames": "^2.1.2",
+    "jquery": "^2.1.4",
+    "numeral": "^1.5.3",
+    "react": "^0.13.2",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-clean": "^0.3.1",
+    "gulp-react": "^3.0.1",
+    "react-tools": "^0.11.2",
+    "jest-cli": "^0.4.0"
+  },
+  "jest": {
+    "rootDir": "src",
+    "scriptPreprocessor": "../config/preprocessor.js",
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "collectCoverage": true
+  },
+  "scripts": {
+    "build": "gulp build",
+    "test": "jest --coverage"
+  }
+}
