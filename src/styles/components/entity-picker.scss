@@ -1,0 +1,257 @@
+@import "../ix-variables";
+@import "../ix-mixins";
+
+@import "./auto-suggest";
+
+$text-lighten-amount: 0.6;
+$line-lighten-percent: 30%;
+
+@keyframes blinker {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.ix-entity-picker{
+  display: inline-block;
+  max-width: 500px;
+  min-width: 150px;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  height: 80px;
+  margin: 10px 5px 5px;
+  cursor: default;
+
+  &.product{
+    min-width: 200px;
+  }
+  &.brand{
+    min-width: 110px;
+  }
+  &.category{
+    min-width: 160px;
+  }
+  &.store{
+    min-width: 110px;
+  }
+
+  // Input box
+  input{
+    position: absolute;
+    opacity: 0 !important;
+    z-index: -1;
+
+    &:focus ~ .picker-all-text,
+    &.set ~ .picker-all-text {
+      opacity: 0;
+    }
+    &:focus ~ .picker-placeholder,
+    &.set ~ .picker-placeholder {
+      opacity: 1;
+      transform: scale(0.5) translate3d(0, -30px, 0);
+      font-weight: 400;
+    }
+    &:focus ~ .picker-bottom-line:after{
+      width: 100%;
+    }
+    &.set ~ .picker-text{
+      font-weight: 500;
+    }
+    &:focus ~ .picker-text{
+      font-weight: 400;
+    }
+    &:not(:focus) ~ .picker-text:after{
+      visibility: hidden;
+    }
+    // this should either be in autosuggest styling or in JS
+    &:focus ~ .ix-autosuggest{
+      opacity: 1;
+      overflow: visible;
+      max-height: 600px;
+      transform: translate3d(0,0,0);
+    }
+    &:not(:focus) ~ .ix-autosuggest{
+      max-height: 0;
+      overflow: hidden;
+    }
+  }
+
+  // Value
+  > .picker-text{
+    height: 35px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    user-select: none;
+    z-index: 1;
+    text-transform: uppercase;
+    max-width: 100%;
+    transition: max-width 450ms $transition-function 0ms;
+    @include text-overflow();
+
+    //blinker
+    &:after{
+      content: '|';
+      animation: blinker 0.5s linear infinite alternate;
+    }
+    &.empty{
+      max-width: 4px;
+      &:after{
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+  &.editable > .picker-text{
+    cursor: text;
+  }
+  &.product > .picker-text{
+    color: $product;
+  }
+  &.brand > .picker-text{
+    color: $brand;
+  }
+  &.store > .picker-text{
+    color: $store;
+  }
+  &.category > .picker-text{
+    color: $category;
+  }
+
+  // Bottom Line
+  > .picker-bottom-line{
+    border-width: 2px;
+    margin: 0;
+    position: relative;
+
+    &:after{
+      content: ' ';
+      background-color: $primaryColor;
+      width: 0%;
+      height: 2px;
+      position: absolute;
+      top: -2px;
+      transition: width 450ms $transition-function 0ms;
+    }
+  }
+  &.product > .picker-bottom-line{
+    border-color: lighten($product, $line-lighten-percent);
+    &:after{
+      background-color: $product;
+    }
+  }
+  &.brand > .picker-bottom-line{
+    border-color: lighten($brand, $line-lighten-percent);
+    &:after{
+      background-color: $brand;
+    }
+  }
+  &.store > .picker-bottom-line{
+    border-color: lighten($store, $line-lighten-percent);
+    &:after{
+      background-color: $store;
+    }
+  }
+  &.category > .picker-bottom-line{
+    border-color: lighten($category, $line-lighten-percent);
+    &:after{
+      background-color: $category;
+    }
+  }
+
+  // Clear link
+  .picker-clear{
+    visibility: hidden;
+    position: absolute;
+    font-size: 12px;
+    bottom: 0px;
+    cursor: pointer;
+  }
+  &:hover .picker-clear{
+    visibility: visible;
+  }
+
+  // "All" Text
+  .picker-all-text{
+    position: absolute;
+    top: 7px;
+    font-size: 11px;
+    opacity: 1;
+    transition: opacity 450ms $transition-function 0ms;
+  }
+  &.product > .picker-all-text{
+    color: $product;
+  }
+  &.brand > .picker-all-text{
+    color: $brand;
+  }
+  &.store > .picker-all-text{
+    color: $store;
+  }
+  &.category > .picker-all-text{
+    color: $category;
+  }
+
+  // Label
+  > .picker-placeholder{
+    position: absolute;
+    top: 20px;
+    font-size: 25px;
+    font-weight: 200;
+    text-transform: uppercase;
+    transition: all 450ms $transition-function 0ms;
+    transform: scale(1) translate3d(0, 0, 0);
+    transform-origin: left top 0px;
+    opacity: $text-lighten-amount;
+  }
+  &.editable > .picker-placeholder{
+    cursor: text;
+  }
+  &.product > .picker-placeholder{
+    color: $product;
+  }
+  &.brand > .picker-placeholder{
+    color: $brand;
+  }
+  &.store > .picker-placeholder{
+    color: $store;
+  }
+  &.category > .picker-placeholder{
+    color: $category;
+  }
+
+  // Value placeholder
+  .value-placeholder{
+    display: none;
+    width: 100%;
+    opacity: 0.3;
+    position: absolute;
+    top: 20px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    @include text-overflow();
+  }
+  &.product > .value-placeholder{
+    color: $product;
+  }
+  &.brand > .value-placeholder{
+    color: $brand;
+  }
+  &.store > .value-placeholder{
+    color: $store;
+  }
+  &.category > .value-placeholder{
+    color: $category;
+  }
+}
+
+.picker-in{
+  display: inline-block;
+  height: 50px;
+  position: relative;
+  bottom: 15px;
+  margin: 0 10px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  opacity: 0.6;
+}

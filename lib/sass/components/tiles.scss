@@ -1,0 +1,40 @@
+@import "../ix-variables";
+@import "../ix-mixins";
+
+.ix-tiles{
+  margin-top: 40px;
+  .filler{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 4px;
+    opacity: .7;
+    top: 0;
+    background-color: red;
+  }
+  .ix-product-tile{
+    // background-image: url("../../images/Products.png");
+    .filler,.title,.count{
+      background: $product;
+    }
+  }
+  .ix-brand-tile{
+    // background-image: url("../../images/Brands.png");
+    .filler,.title,.count{
+      background: $brand;
+    }
+  }
+  .ix-category-tile{
+    // background-image: url("../../images/Categories.png");
+    .filler,.title,.count{
+      background: $category;
+    }
+  }
+  .ix-store-tile{
+    // background-image: url("../../images/Stores.png");
+    .filler,.title,.count{
+      background: $store;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "../ix-variables";
+@import "../ix-mixins";
+
+.toast-container{
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  z-index: 1040;
+  &.closed{
+    opacity: 0;
+    top: -100px;
+  }
+  .toast{
+    width: 650px;
+    margin: 0 auto;
+    position: relative;
+    .close{
+      padding-left: 20px;
+    }
+  }
+}

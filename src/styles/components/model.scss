@@ -1,0 +1,205 @@
+@import "../ix-variables";
+@import "../ix-mixins";
+
+@mixin common-modal{
+  .modal-content{
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 0px 33px 0px rgba($black, 0.35);
+    .modal-header{
+      border: none;
+      background: $textBlack;
+      color: $white;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      box-shadow: 0px 2px 2px 0px rgba($black, 0.7);
+      .close{
+        color: $white;
+        text-shadow: none;
+        font-weight: 100;
+        opacity: .6
+      }
+      h4{
+        color: $white;
+      }
+    }
+    .modal-footer{
+      border: none;
+    }
+  }
+}
+
+@mixin directory-modal{
+  .modal-content.directory{
+    .modal-header{
+      h4{
+        .letter{
+          position: absolute;
+          padding: 15px 20px;
+          font-size: 30px;
+          color: $white;
+          top: -8px;
+          box-shadow: 0 1px 5px 0px rgba(0, 0, 0, .7);
+          &.brand{
+            background: $brand;
+          }
+          &.store{
+            background: $store;
+          }
+          &.category{
+            background: $category;
+          }
+        }
+        .title{
+          margin-left: 75px;
+          color: $white;
+          font-weight: 400;
+          letter-spacing: .2px;
+        }
+        text-transform: uppercase;
+      }
+    }
+
+    .modal-body{
+      padding-top: 30px;
+
+      .directory-nav{
+        margin-bottom: 20px;
+
+        .alphabet{
+          cursor: pointer;
+          padding: 0 6px;
+          text-transform: uppercase;
+          &:hover{
+            text-decoration: underline;
+          }
+          &.selected{
+            background: $black;
+            color: $white;
+            font-weight: 800;
+            padding: 6px 6px;
+            border-radius: 2px;
+            cursor: default;
+
+            &:hover{
+              text-decoration: none;
+            }
+            &.brand{
+              background: $brand;
+            }
+            &.store{
+              background: $store;
+            }
+            &.category{
+              background: $category;
+            }
+          }
+        }
+        .category-path{
+          padding-left: 5px;
+          color: $link;
+          cursor: pointer;
+          &:after{
+            content: ">";
+            margin-left: 5px;
+          }
+          &:hover{
+            filter: grayscale(70%);
+          }
+        }
+      }
+      .directory-container{
+        max-height: 300px;
+        overflow: scroll;
+        border: 1px solid $grey300;
+        border-radius: 2px;
+        padding: 10px;
+
+        .directory-row{
+          margin: 0 -10px;
+          .loading{
+            text-align: center;
+            animation: fade 2s linear infinite;
+          }
+          @keyframes fade{
+            0%{
+              opacity: 0;
+            }
+            50%{
+              opacity: 1;
+            }
+            100%{
+              opacity: 0;
+            }
+          }
+
+          .option-container{
+            position: relative;
+            padding: 10px;
+            margin-bottom: 0;
+            font-weight: normal;
+            float: none;
+            cursor: pointer;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            &:hover{
+              background: $hoverGrey;
+              .category-item-drilldown{
+                opacity: 1;
+              }
+            }
+            .category-item-drilldown{
+              position: absolute;
+              right: 0;
+              background-image: url("../../images/drilldown.png");
+              width: 40px;
+              height: 42px;
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: center 5px;
+              top: -4px;
+              color: $white;
+              opacity: 0;
+              text-align: center;
+              width: 40px;
+              background-color: $grey300;
+
+              &:hover{
+                background-color: $grey400;
+              }
+            }
+          }
+        }
+
+      }
+    }
+    .modal-footer{
+      .btn-link{
+        color: #000;
+        &:hover{
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+
+.modal{
+  .modal-dialog{
+    margin-top: 100px;
+
+    @include common-modal;
+    @include directory-modal;
+  }
+}
+
+.modal-backdrop{
+  background: $white;
+  opacity: .8;
+  &.in{
+    opacity: .9;
+  }
+}

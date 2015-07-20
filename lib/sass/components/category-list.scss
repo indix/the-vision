@@ -1,0 +1,79 @@
+@import "../ix-variables";
+@import "../ix-mixins";
+
+.ix-category-list{
+  @include ix-box;
+
+  .heading{
+    text-transform: uppercase;
+    color:$primaryColor;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 20px;
+    border-bottom: 2px solid $primaryColor;
+  }
+  .categories{
+    padding: 0;
+    max-height: 280px;
+    overflow: hidden;
+    transition: all .5s $transition-function;
+    &.expand{
+      max-height: 468px;
+      overflow: scroll;
+    }
+    li.category-name{
+      padding: 15px 20px;
+      list-style-type: none;
+      cursor: pointer;
+      &:nth-child(1){
+        margin-top: 10px;
+      }
+      &:hover{
+        background: $hoverGrey;
+      }
+
+      &.parent{
+        &:before{
+          content: "\e113";
+          font-family: 'Glyphicons Halflings';
+          position: relative;
+          top: -4px;
+          left: 0px;
+          margin-right: 5px;
+        }
+      }
+      &.current{
+        padding-left: 20px;
+        cursor: default;
+        background: rgba($primaryColor, 0.3);
+      }
+      &.child{
+        padding-left: 30px;
+      }
+
+      > div { //name text
+        display: inline-block;
+        max-width: calc(100% - 45px);
+        @include text-overflow();
+      }
+      .category-products-count{
+        float: right;
+        display: inline-block;
+        max-width: 45px;
+        font-size: 14px;
+        opacity: 0.5;
+      }
+    }
+  }
+  .expand-button{
+    padding: 15px 20px;
+    text-align: right;
+    color: $link;
+    text-decoration: underline;
+    text-transform: uppercase;
+    cursor: initial;
+    span{
+      cursor: pointer;
+    }
+  }
+}

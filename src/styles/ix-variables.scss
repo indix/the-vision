@@ -1,0 +1,64 @@
+@import "bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "./material-colors";
+
+$fonts: 'proxima-nova','Helvetica Neue',Helvetica, Arial, sans-serif;
+
+$primaryColor: #43A047;
+$textBlack: $grey900;
+$textGrey: $grey500;
+$textLightGrey: #ccc;
+
+$brand: #f79100;
+$category: #ffc230;
+$store: #86c22d;
+$product: #1565c0;
+$home: #86c230;
+$competitor: #ff4c24;
+
+$tab-bg-dark: $grey100;
+$tab-bg-light: #fcfcfc;
+
+$link: #039be5;
+
+$price-red: #b71c1c;
+
+$diffGreen: #DEFFDE;
+
+$backgroundGrey: $grey100;
+$borderGrey: $grey300;
+$hoverGrey: #f7f7f7;
+
+$commonBoxShadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.05);
+$selectionBoxShadow: 0px 0px 7px 0 rgba(197, 197, 197, 0.35);
+$transition-function: cubic-bezier(0.23, 1, 0.32, 1);
+
+$ix-container-width: 1280px;
+$ix-min-width: 100px;
+
+
+// --- Bootstrap overrides ---
+$btn-primary-bg: $primaryColor;
+$grid-gutter-width: 40px;
+
+$modal-inner-padding:         20px !default;
+$modal-title-padding:         15px 20px 15px !default;
+
+// --- removing the responsiveness from bootstrap ---
+$container-lg:               $ix-container-width - 2;
+
+$screen-xs:                  $ix-min-width;
+$screen-sm:                  $ix-min-width;
+$screen-md:                  $ix-min-width;
+$screen-lg:                  $ix-min-width;
+
+$screen-xs-min:              $screen-xs;
+$screen-phone:               $screen-xs-min;
+$screen-sm-min:              $screen-sm;
+$screen-tablet:              $screen-sm-min;
+$screen-md-min:              $screen-md;
+$screen-desktop:             $screen-md-min;
+$screen-lg-min:              $screen-lg;
+$screen-lg-desktop:          $screen-lg-min;
+$screen-xs-max:              $ix-container-width;
+$screen-sm-max:              $ix-container-width;
+$screen-md-max:              $ix-container-width;
