@@ -9,7 +9,7 @@ describe('Navbar', function() {
     // var React = require('react/addons');
     // var TestUtils = React.addons.TestUtils;
 
-    // var Navbar = require('../navbar.jsx');
+    var Navbar = require('../navbar.jsx');
     // var Component = TestUtils.renderIntoDocument(React.createElement(Navbar));
 
     // var element = TestUtils.findRenderedDOMComponentWithClass(Component, 'navbar-fixed-top');
