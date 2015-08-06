@@ -1,6 +1,6 @@
 {
   "name": "the-vision",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A set of reusable UI(react) components",
   "main": "index.js",
   "repository": {
