@@ -1,0 +1,13 @@
+@mixin ix-label-common{
+  padding: 3px 8px;
+  display: inline-block;
+  cursor: default;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+@mixin ix-colored-label($color){
+	@include ix-label-common;
+	background-color: lighten($color, 35%);
+}

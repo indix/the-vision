@@ -1,0 +1,15 @@
+@import '../mixins/_ix-label';
+@import '../material-colors';
+
+.ix-colored-label{
+  // Placeholder. No styles
+  &.label-grey200{
+    @include ix-colored-label($blueGrey400);
+  }
+  &.label-green500{
+    @include ix-colored-label($green500);
+  }
+  &.label-red500{
+    @include ix-colored-label($red500);
+  }
+}
