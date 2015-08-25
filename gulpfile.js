@@ -1,6 +1,8 @@
 'use strict';
 
 var gulp = require('gulp');
+var merge = require('merge-stream');
+var runSequence = require('gulp-run-sequence');
 var react = require('gulp-react');
 var clean = require('gulp-clean');
 var sass = require('gulp-sass');
@@ -20,22 +22,21 @@ var AUTOPREFIXER_BROWSERS = [                 // https://github.com/ai/autoprefi
 ];
 
 gulp.task('clean', function(){
-  return gulp.src('./assets/*', {read: false})
+  return gulp.src(['./assets/*', './lib/*/lib/*'], {read: false})
     .pipe(clean());
 });
 
 gulp.task('scripts', function() {
-  return gulp.src(['./src/**/*.{jsx,js}', '!./src/**/__tests__/**'])
+  return gulp.src(['./lib/js/**/*.{jsx,js}', '!./lib/js/**/__tests__/**'])
     .pipe(react({harmony: true}))
-    .pipe(gulp.dest('./lib/js'))
+    .pipe(gulp.dest('./assets/js'))
 });
 
 gulp.task('styles', function() {
-  return gulp.src('./src/styles/**/*.{scss,css}')
-    .pipe(gulp.dest('./lib/sass'))
+  return gulp.src('./lib/sass/**/*.{scss,css}')
     .pipe(plumber())
     .pipe(sass({
-      includePaths: ['./node_modules'],
+      // includePaths: ['./node_modules'],
       sourceMap: false,
       sourceMapBasepath: __dirname
     }))
@@ -45,6 +46,15 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('./assets/css'))
 });
 
-gulp.task('build', ['clean', 'scripts', 'styles']);
+gulp.task('dependencies', function(){
+  return merge(
+    gulp.src('./node_modules/bootstrap-sass/assets/javascripts/bootstrap/**/*').pipe(gulp.dest('./lib/js/lib/bootstrap')),
+    gulp.src('./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/**/*').pipe(gulp.dest('./lib/sass/lib/bootstrap'))
+  );
+});
+
+gulp.task('build', function(cb){
+  runSequence('clean', 'dependencies', ['scripts', 'styles'], cb);
+});
 
 gulp.task('default', ['build']);
