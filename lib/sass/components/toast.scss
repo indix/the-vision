@@ -1,6 +1,9 @@
 @import "../ix-variables";
 @import "../ix-mixins";
-// @import "../bootstrap/_alerts";
+
+// @import "../lib/bootstrap/_variables";
+// @import "../lib/bootstrap/_mixins";
+// @import "../lib/bootstrap/_alerts";
 
 .toast-container{
   position: fixed;

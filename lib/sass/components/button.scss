@@ -1,0 +1,29 @@
+@import '../mixins/_ix-button';
+@import '../material-colors';
+
+.ix-colored-button{
+  // Placeholder. No styles
+  &.button-green500{
+    @include ix-colored-button($green500, $white);
+  }
+  &.button-red500{
+    @include ix-colored-button($red500, $white);
+  }
+
+  //  different text colors
+  &.button-white-green500{
+    @include ix-colored-button($white, $green500);
+  }
+}
+
+.ix-link-button{
+  &.button-green500{
+    @include ix-link-button($green500);
+  }
+  &.button-red500{
+    @include ix-link-button($red500);
+  }
+  &.button-grey900{
+    @include ix-link-button($grey900);
+  }
+}

@@ -1,0 +1,60 @@
+@mixin ix-button-common{
+  padding: 10px 15px;
+  transition: all .1s linear;
+  /*outline: none;*/
+  cursor: pointer;
+}
+
+@mixin ix-colored-button($color, $textColor){
+  @include ix-button-common;
+  border: none;
+  min-width: 100px;
+  background-color: $color;
+  color: $textColor;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  &.hover,
+  &:hover{
+    background-color: lighten($color, 2%);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.16), 0 6px 10px rgba(0, 0, 0, 0.23);
+  }
+  &.active,
+  &:active{
+    background-color: darken($color, 5%);
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.22) inset, 0px 5px 10px rgba(0,0,0,0.22) inset;
+  }
+}
+
+@mixin ix-boreder-button($color){
+  @include ix-button-common;
+  color: $color;
+  border: none;
+  background: none;
+  &.hover,
+  &:hover{
+    background-color: rgba($color, 0.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.16);
+  }
+  &.active,
+  &:active{
+    background-color: rgba($color, 0.2);
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.12) inset;
+  }
+}
+
+@mixin ix-link-button($color){
+  @include ix-button-common;
+  color: $color;
+  background: transparent;
+  border: none;
+
+  &.hover,
+  &:hover{
+    text-decoration: underline;
+  }
+  &.active,
+  &:active{
+    color: darken($color, 7%);
+    text-shadow: 0 0 5px rgba($color, 0.3);
+  }
+}
