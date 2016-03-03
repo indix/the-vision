@@ -29,7 +29,10 @@
 @import "node_modules/bootstrap/scss/input-group";
 @import "node_modules/bootstrap/scss/custom-forms";
 @import "node_modules/bootstrap/scss/nav";
+
 @import "node_modules/bootstrap/scss/navbar";
+@import "navbar-override";
+
 @import "node_modules/bootstrap/scss/card";
 @import "node_modules/bootstrap/scss/breadcrumb";
 @import "node_modules/bootstrap/scss/pagination";
