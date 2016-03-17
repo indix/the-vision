@@ -16,22 +16,44 @@ block content
         .card.card-block
           h4 Standard Buttons
           hr
-          p
-            | Use the primary button as a default. The secondary is for the alternative action.
-          p
-            button.btn.btn-primary(type='button') Primary
-            &nbsp;
-            button.btn.btn-secondary(type='button') Secondary
+          p For most general purpose usage.
+          table.table
+            thead
+              tr
+                th Component
+                th Code
+            tbody
+              tr
+                td
+                  button.btn.btn-primary(type='button') Primary
+                td
+                  code &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
+              tr
+                td
+                  button.btn.btn-secondary(type='button') Secondary
+                td
+                  code &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;Secondary&lt;/button&gt;
           
         .card.card-block
           h4 Action Buttons
           hr
-          p
-            | The success and danger are for specific actions that involve critical outcomes.
-          p
-            button.btn.btn-success(type='button') Success
-            &nbsp;
-            button.btn.btn-danger(type='button') Danger
+          p For specific instances where critical actions happen.
+          table.table
+            thead
+              tr
+                th Component
+                th Code
+            tbody
+              tr
+                td
+                  button.btn.btn-success(type='button') Success
+                td
+                  code &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
+              tr
+                td
+                  button.btn.btn-danger(type='button') Danger
+                td
+                  code &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
 
       .col-sm-12
         h2
@@ -43,33 +65,78 @@ block content
         .card.card-block
           h4 Text Input
           hr
+          p For specific instances where critical actions happen.
           form
-            fieldset.form-group
-              label(for='example-input-text') Active
-              input#example-input-text.form-control(type='text', placeholder='Enter email')
-              small.text-muted We'll never share your email with anyone else.
-            fieldset.form-group
-              label(for='example-input-text') Disabled
-              input#example-input-text.form-control(type='text', disabled='disabled', placeholder="Can't enter anything")
+            table.table
+              thead
+                tr
+                  th Component
+                  th Code
+              tbody
+                tr
+                  td
+                    fieldset.form-group
+                      label(for='example-input-text') Active
+                      input#example-input-text.form-control(type='text', placeholder='Enter email')
+                      small.text-muted We'll never share your email with anyone else.
+                  td
+                    code
+                      &lt;label for=&quot;example-input-text&quot;&gt;Active&lt;/label&gt;
+                      br
+                      &lt;input id=&quot;example-input-text&quot; type=&quot;text&quot; placeholder=&quot;Enter email&quot; class=&quot;form-control&quot;&gt;
+                      br
+                      &lt;small class=&quot;text-muted&quot;&gt;We&#39;ll never share your email with anyone else.&lt;/small&gt;
+                tr
+                  td
+                    fieldset.form-group
+                      label(for='example-input-text') Disabled
+                      input#example-input-text.form-control(type='text', disabled='disabled', placeholder="Can't enter anything")
+                  td
+                    code
+                      &lt;label for=&quot;example-input-text&quot;&gt;Disabled&lt;/label&gt;
+                      br
+                      &lt;input id=&quot;example-input-text&quot; type=&quot;text&quot; disabled=&quot;disabled&quot; placeholder=&quot;Can&#39;t enter anything&quot; class=&quot;form-control&quot;&gt;
       
       
       .col-sm-12
         .card.card-block
           h4.card-title Radio Buttons
-          hr
-          .radio
-            label
-              input(type='radio', value='option1', checked='')
-              |&nbsp;Weekdays
-          .radio.disabled
-            label
-              input(type='radio', value='option2', disabled='')
-              |&nbsp;Weekends
+          table.table
+            thead
+              tr
+                th Component
+                th Code
+            tbody
+              tr
+                td
+                  .radio
+                    label
+                      input(type='radio', value='option1', checked='')
+                      |&nbsp;Weekdays
+                td
+                  code &lt;div class=&quot;radio&quot;&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; value=&quot;option1&quot; checked=&quot;&quot;&gt;&amp;nbsp;Weekdays&lt;/label&gt;&lt;/div&gt;
+              tr
+                td
+                  .radio.disabled
+                    label
+                      input(type='radio', value='option2', disabled='')
+                      |&nbsp;Weekends
+                td
+                  code &lt;div class=&quot;radio disabled&quot;&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; value=&quot;option2&quot; disabled=&quot;&quot;&gt;&amp;nbsp;Weekends&lt;/label&gt;&lt;/div&gt;
         
         .card.card-block
           h4.card-title Checkbox
-          hr
-          .checkbox
-            label
-              input(type='checkbox')
-              |  I agree to the terms
+          table.table
+            thead
+              tr
+                th Component
+                th Code
+            tbody
+              tr
+                td
+                  .checkbox
+                    label
+                      input(type='checkbox')
+                      |  I agree to the terms
+                td
+                  code &lt;div class=&quot;checkbox&quot;&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt; I agree to the terms&lt;/label&gt;&lt;/div&gt;
