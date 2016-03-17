@@ -20183,7 +20183,7 @@
 
 
 	// module
-	exports.push([module.id, "#home-hero-section {\n  background: url(" + __webpack_require__(175) + ") center center no-repeat;\n  height: 400px;\n  color: white; }\n  #home-hero-section h1 {\n    margin-top: 1em; }\n", ""]);
+	exports.push([module.id, "#home-hero-section {\n  background: url(" + __webpack_require__(175) + ") center center no-repeat;\n  height: 400px;\n  color: white;\n  border-radius: 0; }\n  #home-hero-section h1 {\n    margin-top: 1em; }\n", ""]);
 
 	// exports
 
