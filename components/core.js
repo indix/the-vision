@@ -8,6 +8,8 @@ var $ = window.jQuery = require('../node_modules/jquery/dist/jquery.min.js');
 window.Tether = require('../node_modules/tether/dist/js/tether.min.js');
 const bootstrap = require('../node_modules/bootstrap/dist/js/bootstrap.min.js');
 
+const demoStyles = require('!style!css!sass!./demo/home.scss');
+
 const ProductCard = require('./product-card/product-card.js').default;
 
 $(function(){

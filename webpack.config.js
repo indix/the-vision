@@ -9,7 +9,9 @@ module.exports = {
     loaders: [
       { test: /\.json$/, loader: "json-loader"},
       { test: /\.js$/, exclude: /node_modules/, loader: "babel?presets[]=react,presets[]=es2015" },
-      { test: /\.(woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000&name=./public/[hash].[ext]' }
+      { test: /\.(woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000&name=./public/[hash].[ext]' },
+      { test: /\.png$/, loader: "url-loader?limit=100000" },
+      { test: /\.jpg$/, loader: "file-loader?name=./dist/[hash].[ext]" }
     ]
   },
   resolve: {
