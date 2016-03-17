@@ -20183,13 +20183,18 @@
 
 
 	// module
-	exports.push([module.id, "#home-hero-section {\n  background: url(" + __webpack_require__(175) + ") center center no-repeat;\n  height: 400px;\n  color: white;\n  border-radius: 0; }\n  #home-hero-section h1 {\n    margin-top: 1em; }\n", ""]);
+	exports.push([module.id, "#home-hero-section {\n  background: url(" + __webpack_require__(171) + ") center center no-repeat;\n  height: 400px;\n  color: white;\n  border-radius: 0; }\n  #home-hero-section h1 {\n    margin-top: 1em; }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 171 */,
+/* 171 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./public/images/98f39adc67eed0dad302ad1d0d69ee4a.jpg";
+
+/***/ },
 /* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -20309,12 +20314,6 @@
 
 	// exports
 
-
-/***/ },
-/* 175 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./dist/98f39adc67eed0dad302ad1d0d69ee4a.jpg";
 
 /***/ }
 /******/ ]);
