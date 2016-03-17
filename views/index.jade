@@ -1,5 +1,25 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  #home-hero-section.jumbotron
+    .container
+      .row
+        .col-sm-12
+          h1
+            | The 
+            b Vision
+          h4.lead The front end framework for an Indix experience
+  .container
+    .row
+      .col-sm-12
+        h2 Getting Started
+        hr
+      .col-sm-12
+        .card.card-block
+          h4.card-title Components
+          hr
+          ul
+            li
+              a(href='/components/form') Form Elements
+            li
+              a(href='/components/product-card') Product Card

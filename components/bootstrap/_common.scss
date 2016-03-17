@@ -1,3 +1,14 @@
 body{
   background-color: $gray-lighter;
 }
+
+.header{
+  background: $brand-primary;
+  border-radius: 0;
+  color: $body-bg;
+
+  &.jumbotron{
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}

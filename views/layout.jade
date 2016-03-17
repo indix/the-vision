@@ -23,106 +23,26 @@ html.no-js(lang='en')
     // Le fav and touch icons
     link(rel='shortcut icon', href='images/favicon.ico')
     link(rel='apple-touch-icon', href='images/apple-touch-icon.png')
+    block js
+      if ENV_DEVELOPMENT
+        script(src='http://localhost:35729/livereload.js')
   body
     .ix-header-navbar
       .container
         .row
           nav.navbar.navbar-dark.bg-inverse
-            a.navbar-brand(href='#') Indix
+            a.navbar-brand(href='/') The Vision
             ul.nav.navbar-nav
-              li.nav-item.active
-                a.nav-link(href='#') Home
               li.nav-item
-                a.nav-link(href='#') Docs
+                a.nav-link(href='/components/form') Form Elements
               li.nav-item
-                a.nav-link(href='#') About
+                a.nav-link(href='/components/product-card') Product Card
             form.form-inline.pull-xs-right
               input.form-control(type='text', placeholder='Search')
-    #home-hero-section.jumbotron
-      .container
-        .row
-          .col-sm-12
-            h1
-              | The 
-              b Vision
-            h4.lead The front end framework for an Indix experience
-    .container
-      .row
-        // FORM ELEMENTS
-        .col-sm-12
-          h2 Form Elements
-          hr
-        // BUTTONS
-        .col-sm-4
-          .card.card-block
-            h4.card-title Buttons
-            p
-              | Use the primary button as a default. The secondary is for the alternative action.
-            p
-              button.btn.btn-primary(type='button') Primary
-              &nbsp;
-              button.btn.btn-secondary(type='button') Secondary
-            p
-              | The success and danger are for specific actions that involve critical outcomes.
-            p
-              button.btn.btn-success(type='button') Success
-              &nbsp;
-              button.btn.btn-danger(type='button') Danger
-        // TEXT FIELDS
-        .col-sm-4
-          .card.card-block
-            h4.card-title Text Fields
-            form
-              fieldset.form-group
-                label(for='example-input-text') Input text
-                input#example-input-text.form-control(type='text', placeholder='Enter email')
-                small.text-muted We'll never share your email with anyone else.
-              fieldset.form-group
-                label(for='example-input-text') Disabled
-                input#example-input-text.form-control(type='text', disabled='disabled', placeholder="Can't enter anything")
-        // RADIO BUTTONS and CHECKBOX
-        .col-sm-4
-          .card.card-block
-            h4.card-title Radio Buttons
-            .radio
-              label
-                input(type='radio', value='option1', checked='')
-                |  Weekdays
-            .radio.disabled
-              label
-                input(type='radio', value='option2', disabled='')
-                |                 Weekends
-          .card.card-block
-            h4.card-title Checkbox
-            .checkbox
-              label
-                input(type='checkbox')
-                |  I agree to the terms
-        // PRODUCT CARD
-        .col-sm-12
-          br
-          h2 Product Card
-          hr
-          br
-          h4 3 cards per row
-        #product-card-example-1.col-sm-4
-          // Container to render example
-        #product-card-example-2.col-sm-4
-          // Container to render example
-        #product-card-example-3.col-sm-4
-          // Container to render example
-        .col-sm-12
-          br
-          h4 4 cards per row
-        #product-card-example-4.col-sm-3
-          // Container to render example
-        #product-card-example-5.col-sm-3
-          // Container to render example
-        #product-card-example-6.col-sm-3
-          // Container to render example
-        #product-card-example-7.col-sm-3
-          // Container to render example
-    script(src='public/js/indix-ui.js')
+              
+    block content
+    
+    script(src='/public/js/indix-ui.js')
     script(src='https://use.typekit.net/usu2qqi.js')
     script.
       try{Typekit.load({ async: true });}catch(e){}

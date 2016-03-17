@@ -1,0 +1,75 @@
+extends ../layout
+
+block content
+  .jumbotron.header
+    .container
+      .row
+        .col-sm-12
+          h1 Form Elements
+          h4.lead For different forms of input
+          
+  .container
+    .row
+      .col-sm-12
+        h2 Buttons
+        hr
+        .card.card-block
+          h4 Standard Buttons
+          hr
+          p
+            | Use the primary button as a default. The secondary is for the alternative action.
+          p
+            button.btn.btn-primary(type='button') Primary
+            &nbsp;
+            button.btn.btn-secondary(type='button') Secondary
+          
+        .card.card-block
+          h4 Action Buttons
+          hr
+          p
+            | The success and danger are for specific actions that involve critical outcomes.
+          p
+            button.btn.btn-success(type='button') Success
+            &nbsp;
+            button.btn.btn-danger(type='button') Danger
+
+      .col-sm-12
+        h2
+          br
+          | Input Fields
+        hr
+        
+      .col-sm-12
+        .card.card-block
+          h4 Text Input
+          hr
+          form
+            fieldset.form-group
+              label(for='example-input-text') Active
+              input#example-input-text.form-control(type='text', placeholder='Enter email')
+              small.text-muted We'll never share your email with anyone else.
+            fieldset.form-group
+              label(for='example-input-text') Disabled
+              input#example-input-text.form-control(type='text', disabled='disabled', placeholder="Can't enter anything")
+      
+      
+      .col-sm-12
+        .card.card-block
+          h4.card-title Radio Buttons
+          hr
+          .radio
+            label
+              input(type='radio', value='option1', checked='')
+              |&nbsp;Weekdays
+          .radio.disabled
+            label
+              input(type='radio', value='option2', disabled='')
+              |&nbsp;Weekends
+        
+        .card.card-block
+          h4.card-title Checkbox
+          hr
+          .checkbox
+            label
+              input(type='checkbox')
+              |  I agree to the terms
