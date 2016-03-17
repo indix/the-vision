@@ -43,35 +43,97 @@
             </ul>
             <form class="form-inline pull-xs-right">
               <input class="form-control" type="text" placeholder="Search">
-              <button class="btn btn-success-outline" type="submit">Search</button>
             </form>
           </nav>
         </div>
       </div>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <h1>The Vision</h1>
-          <h4 id="subtitle"></h4>
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h1>The Vision</h1>
+            <h4 id="subtitle" class="lead"></h4>
+          </div>
         </div>
       </div>
-      <hr/>
+    </div>
+
+    <div class="container">
       <div class="row">
+
+        <!-- FORM ELEMENTS -->
+        <div class="col-sm-12">
+          <h2>Form Elements</h2>
+          <hr/>
+        </div>
+
+        <!-- BUTTONS -->
         <div class="col-sm-4">
-          <h3>Buttons</h3>
-            <button type="button" class="btn btn-primary">Primary</button>
-            <br/><br/>
-            <button type="button" class="btn btn-secondary">Secondary</button>
-            <br/><br/>
-            <button type="button" class="btn btn-success">Success</button>
+          <div class="card card-block">
+            <h4 class="card-title">Buttons</h4>
+            <p>
+              Use the primary button as a default. The secondary is for the alternative action.
+            </p>
+            <p>
+              <button type="button" class="btn btn-primary">Primary</button>
+              <button type="button" class="btn btn-secondary">Secondary</button>
+            </p>
+            <p>
+              The success and danger are for specific actions that involve critical outcomes.
+            </p>
+            <p>
+              <button type="button" class="btn btn-success">Success</button>
+              <button type="button" class="btn btn-danger">Danger</button>
+            </p>
+          </div>
+        </div>
+
+        <!-- TEXT FIELDS -->
+        <div class="col-sm-4">
+          <div class="card card-block">
+            <h4 class="card-title">Text Fields</h4>
+            <form>
+              <fieldset class="form-group">
+                <label for="example-input-text">Input text</label>
+                <input type="text" class="form-control" id="example-input-text" placeholder="Enter email">
+                <small class="text-muted">We'll never share your email with anyone else.</small>
+              </fieldset>
+              <fieldset class="form-group">
+                <label for="example-input-text">Disabled</label>
+                <input type="text" class="form-control" disabled="disabled" id="example-input-text" placeholder="Can't enter anything">
+              </fieldset>
+            </form>
+          </div>
         </div>
         <div class="col-sm-4">
-          One of three columns
-        </div>
-        <div class="col-sm-4">
-          One of three columns
+          <div class="card card-block">
+
+            <h4 class="card-title">Radio Buttons</h4>
+            <div class="radio">
+              <label>
+                <input type="radio" value="option1" checked> Weekdays
+              </label>
+            </div>
+            <div class="radio disabled">
+              <label>
+                <input type="radio" value="option2" disabled>
+                Weekends
+              </label>
+            </div>
+          </div>
+          <div class="card card-block">
+
+            <h4 class="card-title">Checkbox</h4>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> I agree to the terms
+              </label>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </div>

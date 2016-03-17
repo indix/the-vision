@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/ind9/the-vision",
   "dependencies": {},
-  "scripts": {},
+  "scripts": {
+    "develop": "webpack -w"
+  },
   "devDependencies": {
     "babel-core": "^6.6.4",
     "babel-loader": "^6.2.4",
