@@ -58,8 +58,10 @@
       ixScript.setAttribute('src', assetLocation + 'javascripts/indix-ui.js');
       document.head.appendChild(ixScript);
 
-      var ixStyle = document.createElement('script');
-      ixStyle.setAttribute('src', assetLocation + 'stylesheets/site.css');
+      var ixStyle = document.createElement('link');
+      ixStyle.setAttribute('rel', 'stylesheet');
+      ixStyle.type = 'text/css';
+      ixStyle.setAttribute('href', assetLocation + 'stylesheets/site.css');
       document.head.appendChild(ixStyle);
 
     </script>
