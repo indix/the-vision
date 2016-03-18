@@ -50,7 +50,16 @@
     <%= yield %>
 
     <%= stylesheet_link_tag :site %>
-    <%= javascript_include_tag :"indix-ui" %>
+    <script>
+
+      var isProd = window.location.pathname.indexOf('/the-vision') == 0;
+      var assetLocation = isProd ? './' : '/';
+
+      var ixScript = document.createElement('script');
+      ixScript.setAttribute('src', assetLocation + 'javascripts/indix-ui.js');
+      document.head.appendChild(ixScript);
+
+    </script>
     <script src="https://use.typekit.net/usu2qqi.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <!--
