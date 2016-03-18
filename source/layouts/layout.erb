@@ -49,7 +49,6 @@
 
     <%= yield %>
 
-    <%= stylesheet_link_tag :site %>
     <script>
 
       var isProd = window.location.pathname.indexOf('/the-vision') == 0;
@@ -58,6 +57,10 @@
       var ixScript = document.createElement('script');
       ixScript.setAttribute('src', assetLocation + 'javascripts/indix-ui.js');
       document.head.appendChild(ixScript);
+
+      var ixStyle = document.createElement('script');
+      ixStyle.setAttribute('src', assetLocation + 'stylesheets/site.css');
+      document.head.appendChild(ixStyle);
 
     </script>
     <script src="https://use.typekit.net/usu2qqi.js"></script>
