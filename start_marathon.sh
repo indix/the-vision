@@ -15,6 +15,10 @@ echo 4
 nvm use 5.0.0
 
 echo 5
+
+npm install --production
+
+echo 6
 # start the app.
 npm start
-echo 6
+echo 7
