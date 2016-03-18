@@ -23,7 +23,7 @@
     <!-- Le fav and touch icons-->
     <link rel="shortcut icon" href="./images/favicon.ico">
   </head>
-  <body>
+  <body style="display: none;">
     <div class="ix-header-navbar">
       <div class="container">
         <div class="row">
@@ -64,6 +64,10 @@
       ixStyle.type = 'text/css';
       ixStyle.setAttribute('href', assetLocation + 'stylesheets/site.css');
       document.head.appendChild(ixStyle);
+
+      window.onload = function(){
+        document.body.style.display = '';
+      }
 
     </script>
     <script src="https://use.typekit.net/usu2qqi.js"></script>
