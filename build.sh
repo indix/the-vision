@@ -11,4 +11,4 @@ npm version "$GO_PIPELINE_LABEL"
 
 npm install --production
 
-tar --exclude=test --exclude=.git --exclude=dist --exclude=node_modules -czf dist/the-vision.tgz .
+tar --exclude=test --exclude=.git --exclude=dist -czf dist/the-vision.tgz .
