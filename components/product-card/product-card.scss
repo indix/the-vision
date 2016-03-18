@@ -1,0 +1,31 @@
+@import "../bootstrap/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+.product-card{
+
+  .info{
+    margin: 2em 0 1em;
+    height: 4em;
+  }
+
+  .title-wrap{
+    max-height: 34px;
+    overflow: hidden;
+    margin-bottom: 0.5em;
+  }
+
+  .image{
+    text-align: center;
+    height: 200px;
+
+    img{
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .price{
+    color: $brand-danger;
+  }
+
+}

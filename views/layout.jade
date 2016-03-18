@@ -1,0 +1,59 @@
+doctype html
+//if lt IE 7
+  html.no-js.ie6(lang='en')
+//if IE 7
+  html.no-js.ie7(lang='en')
+//if IE 8
+  html.no-js.ie8(lang='en')
+//if IE 9
+  html.no-js.ie9(lang='en')
+// [if (gt IE 9)|!(IE)] <!
+html.no-js(lang='en')
+  // <![endif]
+  head
+    meta(charset='utf-8')
+    title The VISION - Indix UI Framework
+    #title
+    meta(name='description', content='')
+    meta(name='author', content='')
+    // Le HTML5 shim, for IE6-8 support of HTML elements
+    //if lt IE 9
+      script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+    // Le styles
+    // Le fav and touch icons
+    link(rel='shortcut icon', href='images/favicon.ico')
+    link(rel='apple-touch-icon', href='images/apple-touch-icon.png')
+    block js
+      if ENV_DEVELOPMENT
+        script(src='http://localhost:35729/livereload.js')
+  body
+    .ix-header-navbar
+      .container
+        .row
+          nav.navbar.navbar-dark.bg-inverse
+            a.navbar-brand(href='/') The Vision
+            ul.nav.navbar-nav
+              li.nav-item
+                .dropdown
+                  a.nav-link.dropdown-toggle(href='javascript: void(0);', data-toggle="dropdown") Components
+                  .dropdown-menu
+                    a.dropdown-item(href='/components/form') Form Elements
+                    a.dropdown-item(href='/components/product-card') Product Card
+              li.nav-item
+                a.nav-link(href='/contribute') Contribute
+              li.nav-item.pull-xs-right
+                .nav-link(href='javascript: void(0);') Version 2.0
+              
+    block content
+    
+    script(src='/public/js/indix-ui.js')
+    script(src='https://use.typekit.net/usu2qqi.js')
+    script.
+      try{Typekit.load({ async: true });}catch(e){}
+    //
+      Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+      chromium.org/developers/how-tos/chrome-frame-getting-started
+    //if lt IE 7
+      script(src='//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js')
+      script.
+        window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
