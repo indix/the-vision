@@ -9,8 +9,6 @@ set -x
 nvm use 5.0.0
 npm version "$GO_PIPELINE_LABEL"
 
-npm install
-
-npm run build
+npm install --production
 
 tar --exclude=test --exclude=.git --exclude=dist --exclude=node_modules -czf dist/the-vision.tgz .
