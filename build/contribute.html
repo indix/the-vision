@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!--if lt IE 7html.no-js.ie6(lang='en')
+-->
+<!--if IE 7html.no-js.ie7(lang='en')
+-->
+<!--if IE 8html.no-js.ie8(lang='en')
+-->
+<!--if IE 9html.no-js.ie9(lang='en')
+-->
+<!-- [if (gt IE 9)|!(IE)] <!-->
+<html lang="en" class="no-js">
+  <!-- <![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>The VISION - Indix UI Framework</title>
+    <div id="title"></div>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements-->
+    <!--if lt IE 9script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+    -->
+    <!-- Le styles-->
+    <!-- Le fav and touch icons-->
+    <link rel="shortcut icon" href="./images/favicon.ico">
+  </head>
+  <body>
+    <div class="ix-header-navbar">
+      <div class="container">
+        <div class="row">
+          <nav class="navbar navbar-dark bg-inverse"><a href="/" class="navbar-brand">Indix Open Source</a>
+            <ul class="nav navbar-nav">
+              <li class="nav-item"><a href="index.html" class="nav-link">Getting Started</a></li>
+              <li class="nav-item">
+                <div class="dropdown"><a href="javascript: void(0);" data-toggle="dropdown" class="nav-link dropdown-toggle">Components</a>
+                  <div class="dropdown-menu">
+                    <a href="component-form.html" class="dropdown-item">Form Elements</a>
+                    <a href="component-product-card.html" class="dropdown-item">Product Card</a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item"><a href="contribute.html" class="nav-link">Contribute</a></li>
+              <li class="nav-item pull-xs-right">
+                <div href="javascript: void(0);" class="nav-link">Version 2.0</div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class='jumbotron header'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-sm-12'>
+        <h1>Contribute to The Vision</h1>
+        <h4 class='lead'>Come, join the foce</h4>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='container'>
+  <div class='row'>
+    <div class='col-sm-12'>
+      <div class='card card-block'>
+        <h3 class='card-title'>Development Workflow Setup</h3>
+        <hr>
+        <p>
+          Head over to the
+          <a href='https://github.com/ind9/the-vision/tree/v2.0'>github project page</a>
+          to checkout the code and set it up. The instructions for the dev setup is documented with the project.
+        </p>
+        <br>
+        <h3 class='card-title'>Overview</h3>
+        <hr>
+        <p>
+          One of the core principles of this project is to make is very easy for an engineer to contribute to this project and be able to make modifications on the fly if components don't fit very well in the existing projects. The following section provides a full overview on how to get started with the contribution. If you need help, please reach out on
+          <code>#design_engineering</code>
+          channel on slack.
+        </p>
+        <br>
+        <h5>Bootstrap Customization</h5>
+        <ul>
+          <li>
+            The
+            <code>bootstrap v^4.0.0-alpha.2</code>
+            npm has been included in the project to get the v4 version.
+          </li>
+          <li>
+            The overrides, are in the
+            <code>components/bootstrap</code>
+            folder.
+          </li>
+          <li>
+            The
+            <code>_variables.scss</code>
+            is one of the most powerful files that allow customization at a global level.
+          </li>
+          <li>
+            For component level overrides, add a new files and include it in
+            <code>bootstrap.scss</code>.
+            An example of this is
+            <code>_navbar-override.scss</code>.
+          </li>
+        </ul>
+        <br>
+        <h5>Express Server</h5>
+        <p>
+          The project uses a simple
+          <a href='http://expressjs.com/'>express server</a>
+          setup to house project. Make sure you're comfortable will the concepts of routes and views, since its used to house components.
+        </p>
+        <br>
+        <h5>Components</h5>
+        <p>
+          Components are of two types; There are
+          <b>styled elements</b>
+          and
+          <b>custom components</b>.
+          An example of a styled element is a button, which is just a CSS mod on a bootstrap element. The custom components on the other hand demand a React component of its own.
+        </p>
+        <br>
+        <h5>Technologies</h5>
+        <p>Familiarize yourself with the following technologies to speed up development on the project.</p>
+        <ul>
+          <li>
+            This framework is built with
+            <a href='http://v4-alpha.getbootstrap.com/'>Twitter Bootstrap v4</a>
+            as the base. Be very familiar with this, otherwise, you're about to reinvent the wheel.
+          </li>
+          <li>
+            To organize the components,
+            <a href='https://facebook.github.io/react/'>ReactJS from Facebook</a>
+            is used.
+          </li>
+          <li>
+            The markdown in most views is powered by
+            <a href='http://jade-lang.com/'>Jade</a>.
+          </li>
+          <li>
+            Fonts are loaded from
+            <a href='https://typekit.com/'>Typekit</a>.
+          </li>
+          <li>
+            Development workflows involve
+            <a href='http://gulpjs.com/'>gulp</a>,
+            <a href='https://webpack.github.io/'>webpack</a>
+            and
+            <a href='https://www.npmjs.com/'>npm</a>.
+          </li>
+        </ul>
+        <br>
+        <h3 class='card-title'>Adding a New Component</h3>
+        <hr>
+        <h5 class='text-danger'>Check bootstrap first, always!</h5>
+        <p class='text-danger'>Bootstap has evolved extremely well and houses so many components that practically fill every basic need. So, before going ahead and creating one, please, please do check if it already exists.</p>
+        <br>
+        <h5>Housing the Component</h5>
+        <p>Every component needs a place in the project, so that it can be developed and showcased. Follow the steps below to do so.</p>
+        <ol>
+          <li>
+            Create a new view (page) under the
+            <code>views/components</code>
+            folder.
+          </li>
+          <li>
+            To access this page, add a route in
+            <code>routes/components.js</code>.
+          </li>
+          <li>This page will initially serve as the development environment for the component.</li>
+          <li>Once complete, it can also take in the demonstration and documentation for that component.</li>
+        </ol>
+        <br>
+        <h5>Adding a Styled Element</h5>
+        <ol>
+          <li>
+            Refer to the existing customizations in the
+            <code>components/bootstrap</code>
+            folder.
+          </li>
+          <li>If any of those logically extends the customization, then add the code there. Else, create a new file for it.</li>
+          <li>Check the details below in the document to get details about how to how to showcase it.</li>
+        </ol>
+        <br>
+        <h5>Adding a Custom Component</h5>
+        <ol>
+          <li>
+            Create a new component folder under the
+            <code>components</code>
+            folder.
+          </li>
+          <li>Create the javascript file that powers the functionality of the component. Be sure to make this a react component.</li>
+          <li>Add styles to the same folder.</li>
+          <li>
+            Add a reference to the components in
+            <code>components/core.js</code>,
+            so that it's bundled with the output file, which is
+            <code>indix-ui.js</code>.
+          </li>
+        </ol>
+        <br>
+        <h5>Showcasing the Component</h5>
+        <ol>
+          <li>
+            The component can be showcased in the same page as it was developed. For example, if the new component is call
+            <code>breadcrumbs</code>,
+            then the page URL would be
+            <code>/components/breadcrumbs</code>.
+          </li>
+          <li>Add documentation around how to use this component in the same page, and voila, you're done!</li>
+        </ol>
+        <br>
+        <h5>Pull Requests</h5>
+        <p>The final step is to get your code in. Remember, never commit to master. Develop everything in a branch, have it reviewed by one of the contributors on this project and merge it.</p>
+        <br>
+        <h3>Final word of advice</h3>
+        <hr>
+        <center>
+          <img src='./images/contribute-force.jpg'>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <script>
+
+      var isProd = window.location.pathname.indexOf('/the-vision') == 0;
+      var assetLocation = isProd ? '/the-vision/' : '/';
+
+      var ixScript = document.createElement('script');
+      ixScript.setAttribute('src', assetLocation + 'javascripts/indix-ui.js');
+      document.head.appendChild(ixScript);
+
+      var ixStyle = document.createElement('link');
+      ixStyle.setAttribute('rel', 'stylesheet');
+      ixStyle.type = 'text/css';
+      ixStyle.setAttribute('href', assetLocation + 'stylesheets/site.css');
+      document.head.appendChild(ixStyle);
+
+    </script>
+    <script src="https://use.typekit.net/usu2qqi.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <!--
+    Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+    chromium.org/developers/how-tos/chrome-frame-getting-started
+    -->
+    <!--if lt IE 7
+    script(src='//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js')
+    script.
+      window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
+    -->
+  </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--if lt IE 7html.no-js.ie6(lang='en')
+-->
+<!--if IE 7html.no-js.ie7(lang='en')
+-->
+<!--if IE 8html.no-js.ie8(lang='en')
+-->
+<!--if IE 9html.no-js.ie9(lang='en')
+-->
+<!-- [if (gt IE 9)|!(IE)] <!-->
+<html lang="en" class="no-js">
+  <!-- <![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>The VISION - Indix UI Framework</title>
+    <div id="title"></div>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements-->
+    <!--if lt IE 9script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+    -->
+    <!-- Le styles-->
+    <!-- Le fav and touch icons-->
+    <link rel="shortcut icon" href="./images/favicon.ico">
+  </head>
+  <body>
+    <div class="ix-header-navbar">
+      <div class="container">
+        <div class="row">
+          <nav class="navbar navbar-dark bg-inverse"><a href="/" class="navbar-brand">Indix Open Source</a>
+            <ul class="nav navbar-nav">
+              <li class="nav-item"><a href="index.html" class="nav-link">Getting Started</a></li>
+              <li class="nav-item">
+                <div class="dropdown"><a href="javascript: void(0);" data-toggle="dropdown" class="nav-link dropdown-toggle">Components</a>
+                  <div class="dropdown-menu">
+                    <a href="component-form.html" class="dropdown-item">Form Elements</a>
+                    <a href="component-product-card.html" class="dropdown-item">Product Card</a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item"><a href="contribute.html" class="nav-link">Contribute</a></li>
+              <li class="nav-item pull-xs-right">
+                <div href="javascript: void(0);" class="nav-link">Version 2.0</div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class='jumbotron header'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-sm-12'>
+        <h1>Product Card</h1>
+        <h4 class='lead'>To showcase product tiles</h4>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='container'>
+  <div class='row'>
+    <div class='col-sm-12'>
+      <h4>Usage</h4>
+      <hr>
+      <div class='card card-block'>
+        <p>The product card is a consistent reperesentation of a product with it's most critical attributes. The display is quite flexible to adapt to most common use cases.</p>
+        <p>
+          <b>Code:</b>
+          <pre>var productCard = &lt;ProductCard
+          title=&quot;Asus Zenfone&quot;
+          price=&quot;$300&quot;
+          image=&quot;http://img6a.flixcart.com/imae9tftbfdcxzng.jpeg&quot;
+          link=&quot;http://www.flipkart.com/asus-zenfone&quot;/&gt;;
+          <br>
+          ReactDOM.render(productCard, document.getElementById('#product-card-example'));</pre>
+        </p>
+      </div>
+    </div>
+    <div class='col-sm-12'>
+      <br>
+      <h4>3 per row</h4>
+      <hr>
+    </div>
+    <div class='col-sm-4' id='product-card-example-1'>
+      <!-- Container to render example -->
+    </div>
+    <div class='col-sm-4' id='product-card-example-2'>
+      <!-- Container to render example -->
+    </div>
+    <div class='col-sm-4' id='product-card-example-3'>
+      <!-- Container to render example -->
+    </div>
+    <div class='col-sm-12'>
+      <br>
+      <h4>4 per row</h4>
+      <hr>
+    </div>
+    <div class='col-sm-3' id='product-card-example-4'>
+      <!-- Container to render example -->
+    </div>
+    <div class='col-sm-3' id='product-card-example-5'>
+      <!-- Container to render example -->
+    </div>
+    <div class='col-sm-3' id='product-card-example-6'>
+      <!-- Container to render example -->
+    </div>
+    <div class='col-sm-3' id='product-card-example-7'>
+      <!-- Container to render example -->
+    </div>
+  </div>
+</div>
+
+
+    <script>
+
+      var isProd = window.location.pathname.indexOf('/the-vision') == 0;
+      var assetLocation = isProd ? '/the-vision/' : '/';
+
+      var ixScript = document.createElement('script');
+      ixScript.setAttribute('src', assetLocation + 'javascripts/indix-ui.js');
+      document.head.appendChild(ixScript);
+
+      var ixStyle = document.createElement('link');
+      ixStyle.setAttribute('rel', 'stylesheet');
+      ixStyle.type = 'text/css';
+      ixStyle.setAttribute('href', assetLocation + 'stylesheets/site.css');
+      document.head.appendChild(ixStyle);
+
+    </script>
+    <script src="https://use.typekit.net/usu2qqi.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <!--
+    Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+    chromium.org/developers/how-tos/chrome-frame-getting-started
+    -->
+    <!--if lt IE 7
+    script(src='//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js')
+    script.
+      window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
+    -->
+  </body>
+</html>

@@ -28,8 +28,7 @@
     "serve-favicon": "^2.3.0"
   },
   "scripts": {
-    "start": "node ./bin/www",
-    "build": "webpack",
+    "build": "webpack && middleman build",
     "develop": "webpack -w"
   },
   "devDependencies": {
@@ -40,10 +39,6 @@
     "bootstrap": "^4.0.0-alpha.2",
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
-    "gulp": "^3.9.1",
-    "gulp-livereload": "^3.8.1",
-    "gulp-nodemon": "^2.0.6",
-    "gulp-plumber": "^1.1.0",
     "jquery": "^2.2.1",
     "json-loader": "^0.5.4",
     "node-sass": "^3.4.2",
