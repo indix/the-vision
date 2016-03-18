@@ -3,7 +3,7 @@ var path = require("path");
 module.exports = {
   entry: './components/core.js',
   output: {
-    filename: './public/js/indix-ui.js'
+    filename: './source/javascripts/indix-ui.js'
   },
   module: {
     loaders: [
