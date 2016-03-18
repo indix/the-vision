@@ -10,6 +10,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var components = require('./routes/components');
 
+var oneDay = 86400000;
 var app = express();
 
 var env = process.env.NODE_ENV || 'development';
@@ -28,7 +29,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(cookieParser());
-app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, 'public'), { maxAge: oneDay }));
 
 app.use('/', routes);
 app.use('/components', components);
