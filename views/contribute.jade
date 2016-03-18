@@ -13,7 +13,42 @@ block content
         h2 Getting Started
         hr
       .col-sm-12
+        
         .card.card-block
-          h4.card-title More details
+          h4.card-title Developer Setup
           hr
-          Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus mollis interdum.
+          p Head over to the #[a(href="https://github.com/ind9/the-vision/tree/v2.0") github project page] to checkout the code and set it up. The instruction for the dev setup is documented with the project.
+          
+          br
+        
+          h4.card-title Overview
+          hr
+          p One of the core principles of this project is to make is very easy for an engineer to contribute to this project and be able to make modifications on the fly if components don't fit very well in the existing projects. The following section provides a full overview on how to get started with the contribution. If you need help, please reach out on #[code #design_engineering] channel on slack.
+          
+          br
+          
+          h5 Bootstrap Customization
+          ul
+            li The #[code bootstrap v^4.0.0-alpha.2] npm has been included in the project to get the v4 version.
+            li The overrides, are in the #[code components/bootstrap] folder.
+            li The #[code _variables.scss] is one of the most powerful files that allow customization at a global level.
+            li For component level overrides, add a new files and include it in #[code bootstrap.scss]. An example of this is #[code _navbar-override.scss].
+          
+          br
+          
+          h5 Components
+          p Components are of two types; There are #[b styled elements] and #[b custom components]. An example of a styled element is a button, which is just a CSS mod on a bootstrap element. The custom components on the other hand demand a React component of its own.
+          
+          br
+          
+          h4.card-title Adding a New Component
+          hr
+          h5 Adding Styled Element
+          ol
+            li 
+          ol
+            li Create a new component under the #[code components] folder. Give the component a 
+            li Create a new view (page) under the #[code views/components] folder.
+            li To access this page, add a route in #[code routes/components.js].
+            li This page will initially serve as the development environment for the component. 
+            li Once complete, it can also take in the demonstration and documentation for that component.
