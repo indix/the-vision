@@ -66,7 +66,7 @@
         <hr>
         <p>
           Head over to the
-          <a href='https://github.com/ind9/the-vision/tree/v2.0'>github project page</a>
+          <a href='https://github.com/ind9/the-vision'>github project page</a>
           to checkout the code and set it up. The instructions for the dev setup is documented with the project.
         </p>
         <br>
@@ -103,11 +103,11 @@
           </li>
         </ul>
         <br>
-        <h5>Express Server</h5>
+        <h5>Middleman</h5>
         <p>
           The project uses a simple
-          <a href='http://expressjs.com/'>express server</a>
-          setup to house project. Make sure you're comfortable will the concepts of routes and views, since its used to house components.
+          <a href='https://middlemanapp.com/'>Middleman</a>
+          to house the project.
         </p>
         <br>
         <h5>Components</h5>
@@ -158,13 +158,9 @@
         <p>Every component needs a place in the project, so that it can be developed and showcased. Follow the steps below to do so.</p>
         <ol>
           <li>
-            Create a new view (page) under the
-            <code>views/components</code>
+            Create a new page under
+            <code>source</code>
             folder.
-          </li>
-          <li>
-            To access this page, add a route in
-            <code>routes/components.js</code>.
           </li>
           <li>This page will initially serve as the development environment for the component.</li>
           <li>Once complete, it can also take in the demonstration and documentation for that component.</li>
@@ -204,13 +200,35 @@
             The component can be showcased in the same page as it was developed. For example, if the new component is call
             <code>breadcrumbs</code>,
             then the page URL would be
-            <code>/components/breadcrumbs</code>.
+            <code>/breadcrumbs.html</code>.
           </li>
           <li>Add documentation around how to use this component in the same page, and voila, you're done!</li>
         </ol>
         <br>
         <h5>Pull Requests</h5>
         <p>The final step is to get your code in. Remember, never commit to master. Develop everything in a branch, have it reviewed by one of the contributors on this project and merge it.</p>
+        <br>
+        <h3>Publishing Documentation to Github</h3>
+        <hr>
+        <ol>
+          <li>
+            Run
+            <code>middleman build</code>
+            to generate the static documentation files in the
+            <code>build</code>
+            folder.
+          </li>
+          <li>Commit this code to your curent development branch.</li>
+          <li>
+            To publish the documentation, publish the
+            <code>build</code>
+            folder alone to the
+            <code>gh-pages</code>
+            branch using the following command.
+            <br>
+            <code>git subtree push --prefix build origin gh-pages</code>
+          </li>
+        </ol>
         <br>
         <h3>Final word of advice</h3>
         <hr>
