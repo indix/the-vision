@@ -1,6 +1,7 @@
 
 
 var express = require('express');
+var compression = require('compression');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -10,8 +11,10 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var components = require('./routes/components');
 
-var oneDay = 86400000;
 var app = express();
+
+var oneDay = 86400000;
+app.use(compression());
 
 var env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
