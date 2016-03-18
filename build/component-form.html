@@ -32,8 +32,8 @@
               <li class="nav-item">
                 <div class="dropdown"><a href="javascript: void(0);" data-toggle="dropdown" class="nav-link dropdown-toggle">Components</a>
                   <div class="dropdown-menu">
-                    <a href="/components/form.html" class="dropdown-item">Form Elements</a>
-                    <a href="/components/product-card.html" class="dropdown-item">Product Card</a>
+                    <a href="component-form.html" class="dropdown-item">Form Elements</a>
+                    <a href="component-product-card.html" class="dropdown-item">Product Card</a>
                   </div>
                 </div>
               </li>
@@ -242,7 +242,7 @@
     <script>
 
       var isProd = window.location.pathname.indexOf('/the-vision') == 0;
-      var assetLocation = isProd ? './' : '/';
+      var assetLocation = isProd ? '/the-vision' : '/';
 
       var ixScript = document.createElement('script');
       ixScript.setAttribute('src', assetLocation + 'javascripts/indix-ui.js');
