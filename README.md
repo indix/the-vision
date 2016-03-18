@@ -7,7 +7,7 @@ All Indix apps need to provide consistent experience for users from a branding, 
 This is the visual guide to all experiences.
 
 ##Using components from The Vision project
-Visit [thevision.indix.tv](http://thevision.indix.tv/) for documentation on how to use the components in the framework.
+Visit [oss.indix.com/the-vision](http://oss.indix.com/the-vision/) for documentation on how to use the components in the framework.
 
 ##Dev setup to run the project locally
 
@@ -17,10 +17,8 @@ Visit [thevision.indix.tv](http://thevision.indix.tv/) for documentation on how 
 3. Run `npm install` to install all the dependencies. This may take a while.
 
 ####Starting Development
-1. Run `gulp` to start the dev server. This runs the app on port 3000 with watch enabled on the source code.
-2. Open [localhost:3000](http://localhost:3000/) to view the app.
+1. Refer to [Middleman docs](https://middlemanapp.com/) to install it.
+2. After installing, fire it up using `middleman server`.
+2. Open [localhost:4561](http://localhost:4561/) to view the app.
 3. Changes to the source code auto-refreshes the browser.
 4. In a parallel window, run `npm develop` to run webpack in watch mode. This bundles all static assets.
-
-####Standalone server
-1. If you are not interested in development, but just starting up the server, just run `npm start` to fire up the server in port 3000.
