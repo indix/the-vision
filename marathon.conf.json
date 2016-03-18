@@ -15,7 +15,7 @@
   "ports": [
     0
   ],
-  "cmd": "s3cmd get s3://indix-build-artifacts/{{ .Env.GO_PIPELINE_NAME }}/{{ .Env.GO_STAGE_NAME }}/{{ .Env.GO_JOB_NAME }}/{{ .Env.GO_PIPELINE_COUNTER }}.{{ .Env.GO_STAGE_COUNTER }}/dist/the-vision.tgz && tar -xzf the-vision.tgz && server/start_marathon.sh",
+  "cmd": "s3cmd get s3://indix-build-artifacts/{{ .Env.GO_PIPELINE_NAME }}/{{ .Env.GO_STAGE_NAME }}/{{ .Env.GO_JOB_NAME }}/{{ .Env.GO_PIPELINE_COUNTER }}.{{ .Env.GO_STAGE_COUNTER }}/dist/the-vision.tgz && tar -xzf the-vision.tgz && ./start_marathon.sh",
   "uris": [],
   "constraints": [["network", "LIKE", "public"]],
   "upgradeStrategy": {
