@@ -1,0 +1,38 @@
+{
+  "id": "{{ .DEPLOY_ENV }}.the-vision",
+  "cpus": 0.1,
+  "mem": 256.0,
+  "disk": 2048.0,
+  "labels": {
+    "alerts.enabled": "{{if .DEPLOY_ENV | eq "production"}}true{{else}}false{{end}}",
+    "alerts.slack.channel": "#design_engineering",
+    "alerts.slack.owners": "praveen"
+  },
+  "instances": 1,
+  "backoffSeconds": 1,
+  "backoffFactor": 1.01,
+  "maxLaunchDelaySeconds": 300,
+  "ports": [
+    0
+  ],
+  "cmd": "s3cmd get s3://indix-build-artifacts/{{ .Env.GO_PIPELINE_NAME }}/{{ .Env.GO_STAGE_NAME }}/{{ .Env.GO_JOB_NAME }}/{{ .Env.GO_PIPELINE_COUNTER }}.{{ .Env.GO_STAGE_COUNTER }}/dist/the-vision.tgz && tar -xzf the-vision.tgz && server/start_marathon.sh",
+  "uris": [],
+  "constraints": [["network", "LIKE", "public"]],
+  "upgradeStrategy": {
+    "minimumHealthCapacity": 0.9,
+    "maximumOverCapacity": 0.1
+  },
+  "env": {
+    "NODE_ENV": "{{ .DEPLOY_ENV }}"
+  },
+  "healthChecks": [
+    {
+      "protocol": "COMMAND",
+      "command": { "value": "curl -f http://$HOST:$PORT0/" },
+      "gracePeriodSeconds": 240,
+      "intervalSeconds": 60,
+      "maxConsecutiveFailures": 3,
+      "timeoutSeconds": 20
+    }
+  ]
+}
