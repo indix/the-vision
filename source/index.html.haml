@@ -1,0 +1,68 @@
+#home-hero-section.jumbotron
+  .container
+    .row
+      .col-sm-12
+        %h1
+          The
+          %b VISION
+        %h4.lead The front end framework for an Indix experience
+
+.container
+  .row
+    .col-sm-8
+      %h2 Getting Started
+      %hr/
+      .card.card-block
+        %h4.card-title Overview
+        %hr/
+        %ul
+          %li
+            This framework is built with
+            %a{:href => "http://v4-alpha.getbootstrap.com/"} Twitter Bootstrap v4
+            as the base. Please make yourself extremely familiar with that before jumping into this, otherwise, you're about to reinvent the wheel.
+          %li
+            To organize the components,
+            %a{:href => "https://facebook.github.io/react/"} ReactJS from Facebook
+            is used.
+          %li
+            Fonts are loaded from
+            = succeed "." do
+              %a{:href => "https://typekit.com/"} Typekit
+      .card.card-block
+        %h4.card-title Installation
+        %hr/
+        %ol
+          %li
+            Install
+            %a{:href => "https://www.npmjs.com/package/the-vision"}
+            the-vision npm.
+            %br/
+            %br/
+            %code npm install the-vision --save
+            %br/
+            %br/
+          %li
+            Include the script in your app. This packages all necessary functionality and styling.
+            %br/
+            %br/
+            %code &lt;script src=&quot;/node_modules/the-vision/dist/indix-ui.js&quot;&gt;&lt;/script&gt;
+            %br/
+            %br/
+          %li
+            Add the typekit script to load fonts.
+            %br/
+            %br/
+            %code &lt;script src=&quot;https://use.typekit.net/usu2qqi.js&quot;&gt;&lt;/script&gt;
+        = succeed "Bingo!" do
+          %br/
+        You're all set. Check out the components for specific usage details.
+    .col-sm-4
+      %h2 Components
+      %hr/
+      .card.card-block
+        %p The following components are ready for use. Pick one to find out how.
+        %ul
+          %li
+            %a{:href => "/components/form"} Form Elements
+          %li
+            %a{:href => "/components/product-card"} Product Card
