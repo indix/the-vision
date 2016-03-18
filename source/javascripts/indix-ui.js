@@ -56,9 +56,7 @@
 	window.Tether = __webpack_require__(167);
 	var bootstrap = __webpack_require__(168);
 
-	var demoStyles = __webpack_require__(169);
-
-	var ProductCard = __webpack_require__(172).default;
+	var ProductCard = __webpack_require__(169).default;
 
 	$(function () {
 
@@ -20152,52 +20150,6 @@
 /* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(170);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(4)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./home.scss", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./home.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 170 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(3)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "#home-hero-section {\n  background: url(" + __webpack_require__(171) + ") center center no-repeat;\n  height: 400px;\n  color: white;\n  border-radius: 0; }\n  #home-hero-section h1 {\n    margin-top: 1em; }\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 171 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./public/images/c891c81b6630a39c1f14e361f2fa9ec3.jpg";
-
-/***/ },
-/* 172 */
-/***/ function(module, exports, __webpack_require__) {
-
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -20210,7 +20162,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _productCard = __webpack_require__(173);
+	var _productCard = __webpack_require__(170);
 
 	var _productCard2 = _interopRequireDefault(_productCard);
 
@@ -20276,13 +20228,13 @@
 	exports.default = ProductCard;
 
 /***/ },
-/* 173 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(174);
+	var content = __webpack_require__(171);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -20302,7 +20254,7 @@
 	}
 
 /***/ },
-/* 174 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();

@@ -28,8 +28,7 @@
     "serve-favicon": "^2.3.0"
   },
   "scripts": {
-    "start": "node ./bin/www",
-    "build": "webpack",
+    "build": "webpack && middleman build",
     "develop": "webpack -w"
   },
   "devDependencies": {
