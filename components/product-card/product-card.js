@@ -1,7 +1,5 @@
 import React from 'react';
 
-import ProductCardStyles from '!style!css!sass!./product-card.scss';
-
 class ProductCard extends React.Component{
 
   constructor(props) {
