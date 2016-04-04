@@ -20148,21 +20148,13 @@
 /* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
+	"use strict";
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(7);
 
 	var _react2 = _interopRequireDefault(_react);
-
-	var _productCard = __webpack_require__(170);
-
-	var _productCard2 = _interopRequireDefault(_productCard);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -20182,39 +20174,39 @@
 	  }
 
 	  _createClass(ProductCard, [{
-	    key: 'render',
+	    key: "render",
 	    value: function render() {
 
 	      return _react2.default.createElement(
-	        'div',
-	        { className: 'card card-block product-card' },
+	        "div",
+	        { className: "card card-block product-card" },
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'image' },
-	          _react2.default.createElement('img', { src: this.props.image, alt: this.props.image, className: 'img-rounded' })
+	          "div",
+	          { className: "image" },
+	          _react2.default.createElement("img", { src: this.props.image, alt: this.props.image, className: "img-rounded" })
 	        ),
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'info' },
+	          "div",
+	          { className: "info" },
 	          _react2.default.createElement(
-	            'div',
-	            { className: 'title-wrap' },
+	            "div",
+	            { className: "title-wrap" },
 	            _react2.default.createElement(
-	              'h6',
-	              { className: 'title' },
+	              "h6",
+	              { className: "title" },
 	              this.props.title
 	            )
 	          ),
 	          _react2.default.createElement(
-	            'h6',
-	            { className: 'price' },
+	            "h6",
+	            { className: "price" },
 	            this.props.price
 	          )
 	        ),
 	        _react2.default.createElement(
-	          'a',
-	          { href: this.props.link, className: 'btn btn-primary', target: '_blank' },
-	          'Buy Now'
+	          "a",
+	          { href: this.props.link, className: "btn btn-primary", target: "_blank" },
+	          "Buy Now"
 	        )
 	      );
 	    }
@@ -20223,47 +20215,7 @@
 	  return ProductCard;
 	}(_react2.default.Component);
 
-	exports.default = ProductCard;
-
-/***/ },
-/* 170 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(171);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(4)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./product-card.scss", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./product-card.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 171 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(3)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".product-card .info {\n  margin: 2em 0 1em;\n  height: 4em; }\n\n.product-card .title-wrap {\n  max-height: 34px;\n  overflow: hidden;\n  margin-bottom: 0.5em; }\n\n.product-card .image {\n  text-align: center;\n  height: 200px; }\n  .product-card .image img {\n    max-height: 100%;\n    max-width: 100%; }\n\n.product-card .price {\n  color: #d9534f; }\n", ""]);
-
-	// exports
-
+	module.exports = ProductCard;
 
 /***/ }
 /******/ ]);

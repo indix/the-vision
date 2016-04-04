@@ -25,4 +25,4 @@ class ProductCard extends React.Component{
   }
 }
 
-export default ProductCard;
+module.exports = ProductCard;

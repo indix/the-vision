@@ -9,6 +9,8 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+set :build_dir, 'public'
+
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 
