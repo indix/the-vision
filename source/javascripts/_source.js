@@ -1,14 +1,15 @@
-const tetherCSS = require('!style!css!../node_modules/tether/dist/css/tether.min.css');
-const bootstrapCSS = require("!style!css!sass!./bootstrap/bootstrap.scss");
+const tetherCSS = require('!style!css!tether/dist/css/tether.min.css');
+const bootstrapCSS = require("!style!css!sass!../../components/bootstrap/bootstrap.scss");
+const productCardCSS = require("!style!css!sass!../../components/product-card/index.scss");
 
 const React = require('react');
 const ReactDOM = require('react-dom');
 
-var $ = window.jQuery = require('../node_modules/jquery/dist/jquery.min.js');
-window.Tether = require('../node_modules/tether/dist/js/tether.min.js');
-const bootstrap = require('../node_modules/bootstrap/dist/js/bootstrap.min.js');
+var $ = window.jQuery = require('jquery/dist/jquery.min.js');
+window.Tether = require('tether/dist/js/tether.min.js');
+const bootstrap = require('bootstrap/dist/js/bootstrap.min.js');
 
-const ProductCard = require('./product-card/product-card.js').default;
+const ProductCard = require('../../components/product-card');
 
 $(function(){
 

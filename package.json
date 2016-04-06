@@ -1,8 +1,8 @@
 {
   "name": "the-vision",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A set of reusable UI(react) components",
-  "main": "index.js",
+  "main": "build/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ind9/the-vision.git"
@@ -28,6 +28,7 @@
     "serve-favicon": "^2.3.0"
   },
   "scripts": {
+    "build": "babel components -d build && webpack --dist",
     "build-page": "webpack && middleman build",
     "publish-page": "git subtree push --prefix public origin gh-pages",
     "develop": "webpack -w"

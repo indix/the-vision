@@ -12,13 +12,25 @@ Visit [oss.indix.com/the-vision](http://oss.indix.com/the-vision/) for documenta
 ##Dev setup to run the project locally
 
 ####Basic Setup
-1. Checkout the code to the `project folder`.
-2. Run `nvm use v.5.7.1` to switch to the right node version.
+1. Checkout the code.
+2. Run `nvm use` to switch to the right node version.
 3. Run `npm install` to install all the dependencies. This may take a while.
+4. Run `bundle install` to install a few dev-dependencies ([Middleman](https://middlemanapp.com/)).
+<br/>If the previous step fails, install the correct version of ruby. We suggest using [rvm](https://rvm.io/) gemsets.
 
 ####Starting Development
-1. Refer to [Middleman docs](https://middlemanapp.com/) to install it.
-2. After installing, fire it up using `middleman server`.
+1. Fire up using `middleman server`.
 2. Open [localhost:4561](http://localhost:4561/) to view the app.
 3. Changes to the source code auto-refreshes the browser.
-4. In a parallel window, run `npm develop` to run webpack in watch mode. This bundles all static assets.
+4. In a parallel window, run `npm run develop` to run webpack in watch mode. This bundles the js file.
+
+####Publish a new component
+- [x] Add tests
+- [x] Add docs
+- [x] Update version
+- `npm publish`
+
+####Update the webpage
+1. Run `npm run build-page` to build the files.
+2. Run `npm run publish-page` to push the static files to `gh-pages` branch.
+3. Push the branch using `git push origin gh-pages`
