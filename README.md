@@ -13,9 +13,12 @@ Visit [oss.indix.com/the-vision](http://oss.indix.com/the-vision/) for documenta
 
 ####Basic Setup
 1. Checkout the code.
-2. Run `nvm use` to switch to the right node version.
-3. Run `npm install` to install all the dependencies. This may take a while.
-4. Run `bundle install` to install a few dev-dependencies ([Middleman](https://middlemanapp.com/)).
+2. Run `sh boostrap.sh`
+  - Sets up git hooks
+    - `pre-commit` runs the build and adds it before/for every commit
+  - Runs `nvm use` to switch to the right node version.
+  - Runs `npm install` to install all the dependencies. This may take a while.
+3. Run `bundle install` to install a few dev-dependencies ([Middleman](https://middlemanapp.com/)).
 <br/>If the previous step fails, install the correct version of ruby. We suggest using [rvm](https://rvm.io/) gemsets.
 
 ####Starting Development

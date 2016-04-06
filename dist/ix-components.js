@@ -86,8 +86,45 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	
 	  _createClass(ProductCard, [{
+	    key: "renderBuyButton",
+	    value: function renderBuyButton(props) {
+	      return React.createElement(
+	        "div",
+	        { className: "card card-block product-card" },
+	        React.createElement(
+	          "div",
+	          { className: "image" },
+	          React.createElement("img", { src: props.image, alt: props.image, className: "img-rounded" })
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "info" },
+	          React.createElement(
+	            "div",
+	            { className: "title-wrap" },
+	            React.createElement(
+	              "h6",
+	              { className: "title" },
+	              props.title
+	            )
+	          ),
+	          React.createElement(
+	            "h6",
+	            { className: "price" },
+	            props.price
+	          )
+	        ),
+	        React.createElement(
+	          "a",
+	          { href: props.link, className: "btn btn-primary", target: "_blank" },
+	          "Buy Now"
+	        )
+	      );
+	    }
+	  }, {
 	    key: "render",
 	    value: function render() {
+	      if (this.props.type === 'buy-button') return this.renderBuyButton(this.props);
 	
 	      return React.createElement(
 	        "div",
@@ -109,16 +146,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	              this.props.title
 	            )
 	          ),
-	          React.createElement(
+	          [this.props.brand && React.createElement(
+	            "div",
+	            { className: "brand", key: "brand" },
+	            "by ",
+	            this.props.brand
+	          ), this.props.offers && React.createElement(
+	            "div",
+	            { className: "offers", key: "offers" },
+	            React.createElement(
+	              "span",
+	              { className: "count" },
+	              this.props.offers,
+	              " offers"
+	            ),
+	            " from"
+	          ), this.props.price && React.createElement(
 	            "h6",
-	            { className: "price" },
+	            { className: "price", key: "price" },
 	            this.props.price
-	          )
-	        ),
-	        React.createElement(
-	          "a",
-	          { href: this.props.link, className: "btn btn-primary", target: "_blank" },
-	          "Buy Now"
+	          ), this.props.stores && React.createElement(
+	            "div",
+	            { className: "stores", key: "stores" },
+	            "Available in ",
+	            this.props.stores,
+	            " store",
+	            this.props.stores === 1 ? '' : 's'
+	          )]
 	        )
 	      );
 	    }
@@ -126,6 +180,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  return ProductCard;
 	}(React.Component);
+	
+	ProductCard.propTypes = {
+	  type: React.PropTypes.oneOf(['buy-button', 'info']),
+	  image: React.PropTypes.string,
+	  title: React.PropTypes.string.isRequired,
+	  brand: React.PropTypes.string,
+	  offers: React.PropTypes.number,
+	  price: React.PropTypes.string,
+	  stores: React.PropTypes.number,
+	  onClick: React.PropTypes.func
+	};
+	
+	ProductCard.defaultProps = {
+	  type: 'buy-button'
+	};
 	
 	module.exports = ProductCard;
 
@@ -8028,6 +8097,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	};
 	
+	function registerNullComponentID() {
+	  ReactEmptyComponentRegistry.registerNullComponentID(this._rootNodeID);
+	}
+	
 	var ReactEmptyComponent = function (instantiate) {
 	  this._currentElement = null;
 	  this._rootNodeID = null;
@@ -8036,7 +8109,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	assign(ReactEmptyComponent.prototype, {
 	  construct: function (element) {},
 	  mountComponent: function (rootID, transaction, context) {
-	    ReactEmptyComponentRegistry.registerNullComponentID(rootID);
+	    transaction.getReactMountReady().enqueue(registerNullComponentID, this);
 	    this._rootNodeID = rootID;
 	    return ReactReconciler.mountComponent(this._renderedComponent, rootID, transaction, context);
 	  },
@@ -18759,7 +18832,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	'use strict';
 	
-	module.exports = '0.14.7';
+	module.exports = '0.14.8';
 
 /***/ },
 /* 148 */

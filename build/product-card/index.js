@@ -20,8 +20,45 @@ var ProductCard = function (_React$Component) {
   }
 
   _createClass(ProductCard, [{
+    key: "renderBuyButton",
+    value: function renderBuyButton(props) {
+      return React.createElement(
+        "div",
+        { className: "card card-block product-card" },
+        React.createElement(
+          "div",
+          { className: "image" },
+          React.createElement("img", { src: props.image, alt: props.image, className: "img-rounded" })
+        ),
+        React.createElement(
+          "div",
+          { className: "info" },
+          React.createElement(
+            "div",
+            { className: "title-wrap" },
+            React.createElement(
+              "h6",
+              { className: "title" },
+              props.title
+            )
+          ),
+          React.createElement(
+            "h6",
+            { className: "price" },
+            props.price
+          )
+        ),
+        React.createElement(
+          "a",
+          { href: props.link, className: "btn btn-primary", target: "_blank" },
+          "Buy Now"
+        )
+      );
+    }
+  }, {
     key: "render",
     value: function render() {
+      if (this.props.type === 'buy-button') return this.renderBuyButton(this.props);
 
       return React.createElement(
         "div",
@@ -43,16 +80,33 @@ var ProductCard = function (_React$Component) {
               this.props.title
             )
           ),
-          React.createElement(
+          [this.props.brand && React.createElement(
+            "div",
+            { className: "brand", key: "brand" },
+            "by ",
+            this.props.brand
+          ), this.props.offers && React.createElement(
+            "div",
+            { className: "offers", key: "offers" },
+            React.createElement(
+              "span",
+              { className: "count" },
+              this.props.offers,
+              " offers"
+            ),
+            " from"
+          ), this.props.price && React.createElement(
             "h6",
-            { className: "price" },
+            { className: "price", key: "price" },
             this.props.price
-          )
-        ),
-        React.createElement(
-          "a",
-          { href: this.props.link, className: "btn btn-primary", target: "_blank" },
-          "Buy Now"
+          ), this.props.stores && React.createElement(
+            "div",
+            { className: "stores", key: "stores" },
+            "Available in ",
+            this.props.stores,
+            " store",
+            this.props.stores === 1 ? '' : 's'
+          )]
         )
       );
     }
@@ -60,5 +114,20 @@ var ProductCard = function (_React$Component) {
 
   return ProductCard;
 }(React.Component);
+
+ProductCard.propTypes = {
+  type: React.PropTypes.oneOf(['buy-button', 'info']),
+  image: React.PropTypes.string,
+  title: React.PropTypes.string.isRequired,
+  brand: React.PropTypes.string,
+  offers: React.PropTypes.number,
+  price: React.PropTypes.string,
+  stores: React.PropTypes.number,
+  onClick: React.PropTypes.func
+};
+
+ProductCard.defaultProps = {
+  type: 'buy-button'
+};
 
 module.exports = ProductCard;
