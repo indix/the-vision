@@ -28,7 +28,7 @@ class ProductCard extends React.Component{
       return this.renderBuyButton(this.props)
 
     return (
-      <div className="card card-block product-card">
+      <div className="card card-block product-card" onClick={this.props.onClick}>
         <div className="image">
           <img src={this.props.image} alt={this.props.image} className="img-rounded" />
         </div>
@@ -70,6 +70,7 @@ ProductCard.propTypes = {
 
 ProductCard.defaultProps = {
   type: 'buy-button',
+  onClick: x => x,
 }
 
 module.exports = ProductCard

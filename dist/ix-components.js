@@ -128,7 +128,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	      return React.createElement(
 	        "div",
-	        { className: "card card-block product-card" },
+	        { className: "card card-block product-card", onClick: this.props.onClick },
 	        React.createElement(
 	          "div",
 	          { className: "image" },
@@ -194,7 +194,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	
 	ProductCard.defaultProps = {
-	  type: 'buy-button'
+	  type: 'buy-button',
+	  onClick: function onClick(x) {
+	    return x;
+	  }
 	};
 	
 	module.exports = ProductCard;

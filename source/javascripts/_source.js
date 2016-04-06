@@ -22,6 +22,7 @@ $(function(){
       price="$300 - $375"
       image="http://img6a.flixcart.com/image/mobile/g/2/z/asus-zenfone-2-laser-ze600kl-400x400-imae9tftbfdcxzng.jpeg"
       stores={2}
+      onClick={testCallback}
     />
   );
 
