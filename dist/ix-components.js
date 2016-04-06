@@ -124,11 +124,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: "render",
 	    value: function render() {
+	      var _this2 = this;
+	
 	      if (this.props.type === 'buy-button') return this.renderBuyButton(this.props);
 	
 	      return React.createElement(
 	        "div",
-	        { className: "card card-block product-card", onClick: this.props.onClick },
+	        { className: "card card-block product-card", onClick: function onClick(event) {
+	            return _this2.props.onClick(event, _this2.props);
+	          } },
 	        React.createElement(
 	          "div",
 	          { className: "image" },
