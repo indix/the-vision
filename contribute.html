@@ -216,18 +216,18 @@
             Run
             <code>middleman build</code>
             to generate the static documentation files in the
-            <code>build</code>
+            <code>public</code>
             folder.
           </li>
           <li>Commit this code to your curent development branch.</li>
           <li>
             To publish the documentation, publish the
-            <code>build</code>
+            <code>public</code>
             folder alone to the
             <code>gh-pages</code>
             branch using the following command.
             <br>
-            <code>git subtree push --prefix build origin gh-pages</code>
+            <code>git subtree push --prefix public origin gh-pages</code>
           </li>
         </ol>
         <br>
@@ -256,7 +256,7 @@
       var assetLocation = isProd ? '/the-vision/' : '/';
 
       var ixScript = document.createElement('script');
-      ixScript.setAttribute('src', assetLocation + 'javascripts/indix-ui.js');
+      ixScript.setAttribute('src', assetLocation + 'javascripts/main.js');
       document.head.appendChild(ixScript);
 
       var ixStyle = document.createElement('link');
