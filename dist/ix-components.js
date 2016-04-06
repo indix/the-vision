@@ -158,7 +158,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	              "span",
 	              { className: "count" },
 	              this.props.offers,
-	              " offers"
+	              " offer",
+	              this.props.offers === 1 ? '' : 's'
 	            ),
 	            " from"
 	          ), this.props.price && React.createElement(

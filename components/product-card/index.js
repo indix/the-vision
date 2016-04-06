@@ -42,7 +42,7 @@ class ProductCard extends React.Component{
               <div className="brand" key="brand">by {this.props.brand}</div>
               ,
               this.props.offers &&
-              <div className="offers" key="offers"><span className="count">{this.props.offers} offers</span> from</div>
+              <div className="offers" key="offers"><span className="count">{this.props.offers} offer{this.props.offers === 1 ? '' : 's'}</span> from</div>
               ,
               this.props.price &&
               <h6 className="price" key="price">{this.props.price}</h6>

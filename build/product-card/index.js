@@ -92,7 +92,8 @@ var ProductCard = function (_React$Component) {
               "span",
               { className: "count" },
               this.props.offers,
-              " offers"
+              " offer",
+              this.props.offers === 1 ? '' : 's'
             ),
             " from"
           ), this.props.price && React.createElement(
