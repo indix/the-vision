@@ -14,14 +14,31 @@
         %p
           %b Code:
           %pre
-            var productCard = &lt;ProductCard
-            title=&quot;Asus Zenfone&quot;
-            price=&quot;$300&quot;
-            image=&quot;http://img6a.flixcart.com/imae9tftbfdcxzng.jpeg&quot;
-            link=&quot;http://www.flipkart.com/asus-zenfone&quot;/&gt;;
-            %br/
-            ReactDOM.render(productCard, document.getElementById('#product-card-example'));
-            
+            :preserve
+              var productCard = (
+                &lt;ProductCard
+                  type="buy-button"
+                  title="Asus Zenfone"
+                  price="$300"
+                  image="http://img6a.flixcart.com/imae9tftbfdcxzng.jpeg"
+                  link="http://www.flipkart.com/asus-zenfone"
+                /&gt;
+              )
+              <br/>
+              var productCard = (
+                &lt;ProductCard
+                  type="info"
+                  title=&quot;Asus Zenfone&quot; // (required)
+                  brand="Asus"
+                  offers={20}
+                  price="$300 - $375"
+                  image="http://img6a.flixcart.com/imae9tftbfdcxzng.jpeg"
+                  stores={2}
+                /&gt;
+              )
+              <br/>
+              ReactDOM.render(productCard, document.getElementById('#product-card-example'));
+
     .col-sm-12
       %br/
       %h4 3 per row

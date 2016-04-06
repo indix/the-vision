@@ -1,12 +1,31 @@
-const React = require('react');
+const React = require('react')
 
 class ProductCard extends React.Component{
 
   constructor(props) {
-    super(props);
+    super(props)
+  }
+
+  renderBuyButton(props) {
+    return (
+      <div className="card card-block product-card">
+        <div className="image">
+          <img src={props.image} alt={props.image} className="img-rounded" />
+        </div>
+        <div className="info">
+          <div className="title-wrap">
+            <h6 className="title">{props.title}</h6>
+          </div>
+          <h6 className="price">{props.price}</h6>
+        </div>
+        <a href={props.link} className="btn btn-primary" target="_blank">Buy Now</a>
+      </div>
+    )
   }
 
   render() {
+    if(this.props.type === 'buy-button')
+      return this.renderBuyButton(this.props)
 
     return (
       <div className="card card-block product-card">
@@ -17,12 +36,40 @@ class ProductCard extends React.Component{
           <div className="title-wrap">
             <h6 className="title">{this.props.title}</h6>
           </div>
-          <h6 className="price">{this.props.price}</h6>
+          {
+            [
+              this.props.brand &&
+              <div className="brand" key="brand">by {this.props.brand}</div>
+              ,
+              this.props.offers &&
+              <div className="offers" key="offers"><span className="count">{this.props.offers} offers</span> from</div>
+              ,
+              this.props.price &&
+              <h6 className="price" key="price">{this.props.price}</h6>
+              ,
+              this.props.stores &&
+              <div className="stores" key="stores">Available in {this.props.stores} store{this.props.stores === 1 ? '' : 's'}</div>
+            ]
+          }
         </div>
-        <a href={this.props.link} className="btn btn-primary" target="_blank">Buy Now</a>
       </div>
     )
   }
 }
 
-module.exports = ProductCard;
+ProductCard.propTypes = {
+  type: React.PropTypes.oneOf(['buy-button', 'info']),
+  image: React.PropTypes.string,
+  title: React.PropTypes.string.isRequired,
+  brand: React.PropTypes.string,
+  offers: React.PropTypes.number,
+  price: React.PropTypes.string,
+  stores: React.PropTypes.number,
+  onClick: React.PropTypes.func,
+}
+
+ProductCard.defaultProps = {
+  type: 'buy-button',
+}
+
+module.exports = ProductCard

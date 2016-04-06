@@ -13,14 +13,20 @@ const ProductCard = require('../../components/product-card');
 
 $(function(){
 
-  var productCard1 = <ProductCard
-                      title="Asus Zenfone Max ZC550KL (Black, 16GB)"
-                      price="$300"
-                      image="http://img6a.flixcart.com/image/mobile/g/2/z/asus-zenfone-2-laser-ze600kl-400x400-imae9tftbfdcxzng.jpeg"
-                      link="http://www.flipkart.com/asus-zenfone-2-laser-ze550kl/p/itme9j58yzyzqzgc?pid=MOBE9J587QGMXBB7&cmpid=content_mobile_8965229628_gmc_pla&tgi=sem%2C1%2CG%2C11214002%2Cg%2Csearch%2C%2C50314734860%2C1o1%2C%2C%2Cc%2C%2C%2C%2C%2C%2C%2C&gclid=COXOvIX-xssCFUYXaAodf1kC1A"
-                    />;
+  var productCard1 = (
+    <ProductCard
+      type="info"
+      title="Asus Zenfone Max ZC550KL (Black, 16GB)"
+      brand="Asus"
+      offers={20}
+      price="$300 - $375"
+      image="http://img6a.flixcart.com/image/mobile/g/2/z/asus-zenfone-2-laser-ze600kl-400x400-imae9tftbfdcxzng.jpeg"
+      stores={2}
+    />
+  );
 
   var productCard2 = <ProductCard
+                      type="buy-button"
                       title="Red Tape Lace Up Shoes"
                       price="$250"
                       image="http://img5a.flixcart.com/image/shoe/f/y/x/tan-rtr0543-red-tape-8-400x400-imaegyb7gfkzfhca.jpeg"
@@ -28,6 +34,7 @@ $(function(){
                     />;
 
   var productCard3 = <ProductCard
+                      type="buy-button"
                       title="Nikon COOLPIX L830 16 MP CMOS Digital Camera with 34x Zoom NIKKOR Lens and Full 1080p HD Video (Black) (Certified Refurbished)"
                       price="$159.95"
                       image="http://ecx.images-amazon.com/images/I/71T1GR8Wn-L._SL1000_.jpg"
@@ -35,6 +42,7 @@ $(function(){
                     />;
 
   var productCard4 = <ProductCard
+                      type="buy-button"
                       title="Asus Zenfone Max ZC550KL (Black, 16GB)"
                       price="$300"
                       image="http://img6a.flixcart.com/image/mobile/g/2/z/asus-zenfone-2-laser-ze600kl-400x400-imae9tftbfdcxzng.jpeg"
@@ -42,6 +50,7 @@ $(function(){
                     />;
 
   var productCard5 = <ProductCard
+                      type="buy-button"
                       title="Red Tape Lace Up Shoes"
                       price="$250"
                       image="http://img5a.flixcart.com/image/shoe/f/y/x/tan-rtr0543-red-tape-8-400x400-imaegyb7gfkzfhca.jpeg"
@@ -49,6 +58,7 @@ $(function(){
                     />;
 
   var productCard6 = <ProductCard
+                      type="buy-button"
                       title="Nikon COOLPIX L830 16 MP CMOS Digital Camera with 34x Zoom NIKKOR Lens and Full 1080p HD Video (Black) (Certified Refurbished)"
                       price="$159.95"
                       image="http://ecx.images-amazon.com/images/I/71T1GR8Wn-L._SL1000_.jpg"
@@ -56,6 +66,7 @@ $(function(){
                     />;
 
   var productCard7 = <ProductCard
+                      type="buy-button"
                       title="GoPro HERO4 Silver"
                       price="$300"
                       image="http://ecx.images-amazon.com/images/I/71649Vf%2B2dL._SL1500_.jpg"

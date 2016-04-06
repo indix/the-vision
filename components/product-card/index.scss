@@ -2,17 +2,8 @@
 @import "node_modules/bootstrap/scss/mixins";
 
 .product-card{
-
-  .info{
-    margin: 2em 0 1em;
-    height: 4em;
-  }
-
-  .title-wrap{
-    max-height: 34px;
-    overflow: hidden;
-    margin-bottom: 0.5em;
-  }
+  height: 27em;
+  border: 1px solid #c9c9c9;
 
   .image{
     text-align: center;
@@ -25,8 +16,44 @@
     }
   }
 
+  .info{
+    margin-top: 2em;
+  }
+
+  .title-wrap{
+    height: 2.2em;
+    overflow: hidden;
+    margin-bottom: 0.2em;
+  }
+
+  .brand {
+    font-size: 0.85em;
+    color: $gray;
+    margin-bottom: 1em;
+  }
+
+  .offers {
+    margin-top: 1em;
+    font-size: 0.85em;
+
+    .count {
+      color: $brand-success;
+    }
+  }
+
+  // if brand exists, it sets a bottom margin
+  .brand + .offers {
+    margin-top: 0;
+  }
+
   .price{
     color: $brand-danger;
+  }
+
+  .stores {
+    margin-top: 1em;
+    color: $brand-success;
+    font-size: 0.85em;
   }
 
 }
