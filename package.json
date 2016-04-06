@@ -29,8 +29,7 @@
   },
   "scripts": {
     "build": "babel components -d build && webpack --dist",
-    "build-page": "webpack && middleman build",
-    "publish-page": "git subtree push --prefix public origin gh-pages",
+    "publish-page": "./publish",
     "develop": "webpack -w"
   },
   "devDependencies": {

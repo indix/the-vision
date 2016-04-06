@@ -172,22 +172,8 @@
 
         %h3 Publishing Documentation to Github
         %hr/
-        %ol
-          %li
-            Run
-            %code middleman build
-            to generate the static documentation files in the
-            %code public
-            folder.
-          %li Commit this code to your curent development branch.
-          %li
-            To publish the documentation, publish the
-            %code public
-            folder alone to the
-            %code gh-pages
-            branch using the following command.
-            %br/
-            %code git subtree push --prefix public origin gh-pages
+        Run
+        %code npm run publish-page -- "&lt;commit msg&gt;"
 
         %br/
         %center
