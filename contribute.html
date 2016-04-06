@@ -211,25 +211,8 @@
         <br>
         <h3>Publishing Documentation to Github</h3>
         <hr>
-        <ol>
-          <li>
-            Run
-            <code>middleman build</code>
-            to generate the static documentation files in the
-            <code>public</code>
-            folder.
-          </li>
-          <li>Commit this code to your curent development branch.</li>
-          <li>
-            To publish the documentation, publish the
-            <code>public</code>
-            folder alone to the
-            <code>gh-pages</code>
-            branch using the following command.
-            <br>
-            <code>git subtree push --prefix public origin gh-pages</code>
-          </li>
-        </ol>
+        Run
+        <code>npm run publish-page -- "<commit msg>"</code>
         <br>
         <center>
           <img src='./images/contribute-force.jpg'>
