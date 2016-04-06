@@ -31,6 +31,4 @@ Visit [oss.indix.com/the-vision](http://oss.indix.com/the-vision/) for documenta
 - `npm publish`
 
 ####Update the webpage
-1. Run `npm run build-page` to build the files.
-2. Run `npm run publish-page` to push the static files to `gh-pages` branch.
-3. Push the branch using `git push origin gh-pages`
+Run `npm run publish-page -- "<commit msg>"` to push the static files to `gh-pages` branch.
