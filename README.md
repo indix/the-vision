@@ -31,7 +31,7 @@ Visit [oss.indix.com/the-vision](http://oss.indix.com/the-vision/) for documenta
 - [x] Add tests
 - [x] Add docs
 - [x] Update version
-- `npm publish`
+- [ ] Send a PR
 
 ####Update the webpage
 Run `npm run publish-page -- "<commit msg>"` to push the static files to `gh-pages` branch.
