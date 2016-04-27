@@ -1,7 +1,11 @@
-@import "_misc-variables";
+@import "_img-variables";
 
 body{
-  background-color: $gray-lighter;
+  background-color: #fff;
+  > .main {
+    background-color: $gray-lighter;
+    padding: 2rem 0;
+  }
 }
 
 .header{
@@ -14,6 +18,7 @@ body{
   &.jumbotron{
     padding-top: 2em;
     padding-bottom: 2em;
+    margin-bottom: 0;
   }
 }
 

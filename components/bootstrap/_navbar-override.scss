@@ -1,4 +1,4 @@
-@import "_misc-variables";
+@import "_img-variables";
 
 .ix-header-navbar{
   background-color: $gray-dark;
@@ -21,8 +21,66 @@
 }
 
 .ix-footer-navbar{
-  background-color: $gray-dark;
-  border-top: 5px solid $gray;
-  margin-top: 2em;
-  text-align: center;
+  background-color: #fff;
+  border-top: 5px solid $gray-light;
+
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .ix-logo {
+    background-image: url($logo-footer-grey-uri);
+    background-repeat: no-repeat;
+    background-size: auto 55px;
+    height: 55px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+
+  .list-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: none;
+
+    a {
+      color: $gray-average;
+    }
+  }
+
+  .social-icons{
+    display: flex;
+    justify-content: space-between;
+    width: 260px;
+    margin: auto;
+    float: right;
+    margin-top: 30px;
+  }
+  .social-icons a{
+    background-image: url($footer-social-icons-uri);
+    height: 32px;
+    width: 32px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: auto 29px;
+    margin-right: 10px;
+    opacity: 0.6;
+  }
+  .social-icons a:hover{
+    opacity: 1;
+  }
+  .social-icons a:last-child{
+    margin-right: 0px;
+  }
+  .social-icons a.facebook{
+    background-position: 9px 0px;
+  }
+  .social-icons a.twitter{
+    background-position: -32px 0px;
+  }
+  .social-icons a.linkedin{
+    background-position: -79px 0px;
+  }
 }
