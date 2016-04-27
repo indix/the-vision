@@ -13,31 +13,32 @@
         %p The product card is a consistent reperesentation of a product with it's most critical attributes. The display is quite flexible to adapt to most common use cases.
         %p
           %b Code:
-          %pre
-            :preserve
-              var productCard = (
-                &lt;ProductCard
-                  type="buy-button"
-                  title="Asus Zenfone"
-                  price="$300"
-                  image="http://img6a.flixcart.com/imae9tftbfdcxzng.jpeg"
-                  onClick={showMoreInfo}
-                /&gt;
-              )
-              <br/>
-              var productCard = (
-                &lt;ProductCard
-                  type="info"
-                  title=&quot;Asus Zenfone&quot; // (required)
-                  brand="Asus"
-                  offers={20}
-                  price="$300 - $375"
-                  image="http://img6a.flixcart.com/imae9tftbfdcxzng.jpeg"
-                  stores={2}
-                /&gt;
-              )
-              <br/>
-              ReactDOM.render(productCard, document.getElementById('#product-card-example'));
+        %pre.code
+          :preserve
+            var productCard = (
+              &lt;ProductCard
+                type="buy-button"
+                title="Asus Zenfone"
+                price="$300"
+                image="http://img6a.flixcart.com/imae9tftbfdcxzng.jpeg"
+                onClick={showMoreInfo}
+              /&gt;
+            )
+            <br/>
+            var productCard = (
+              &lt;ProductCard
+                type="info"
+                title=&quot;Asus Zenfone&quot; // (required)
+                brand="Asus"
+                offers={20}
+                price="$300 - $375"
+                image="http://img6a.flixcart.com/imae9tftbfdcxzng.jpeg"
+                stores={2}
+              /&gt;
+            )
+            <br/>
+            ReactDOM.render(productCard, document.getElementById('#product-card-example'));
+          .code-type Javascript
 
     .col-sm-12
       %br/

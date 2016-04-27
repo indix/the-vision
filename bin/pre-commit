@@ -1,11 +1,12 @@
 #!/bin/bash
 
 npm run build
-git add dist
-git add build
 
 RESULT=$?
 if [ $RESULT -ne 0 ]; then
   policy "Build failing"
   exit 1
 fi
+
+git add dist
+git add build

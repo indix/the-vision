@@ -9,7 +9,9 @@ if(dist) {
     'dist/ix-components.min': './components/index.js',
   }
 } else {
-  entry = { 'source/javascripts/main': './source/javascripts/_source.js' }
+  entry = {
+    'source/javascripts/main': './source/javascripts/_source.js',
+  }
 }
 
 module.exports = {

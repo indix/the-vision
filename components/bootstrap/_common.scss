@@ -12,3 +12,24 @@ body{
     padding-bottom: 2em;
   }
 }
+
+pre.code {
+  position: relative;
+  background: $gray-lighter;
+  padding: 20px;
+  margin-bottom: 0;
+  border: 1px solid #ddd;
+  border-radius: .25rem;
+
+  .code-type {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    opacity: 0.35;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-bottom-left-radius: .25rem;
+    font-size: 12px;
+  }
+}
