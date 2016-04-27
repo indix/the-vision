@@ -1,9 +1,13 @@
+@import "_misc-variables";
+
 body{
   background-color: $gray-lighter;
 }
 
 .header{
-  background: $brand-primary;
+  background-image: url($walking-people-gradient-uri);
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 0;
   color: $body-bg;
 
