@@ -13,6 +13,10 @@ const ProductCard = require('../../components/product-card');
 
 $(function(){
 
+  if (!$('#product-card-example-1').length) {
+    return
+  }
+
   var productCard1 = (
     <ProductCard
       type="info"

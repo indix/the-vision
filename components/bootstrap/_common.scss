@@ -8,6 +8,10 @@ body{
   }
 }
 
+.jumbotron {
+  margin-bottom: 0;
+}
+
 .header{
   background-image: url($walking-people-gradient-uri);
   background-repeat: no-repeat;
@@ -18,7 +22,6 @@ body{
   &.jumbotron{
     padding-top: 2em;
     padding-bottom: 2em;
-    margin-bottom: 0;
   }
 }
 
