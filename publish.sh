@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 if [ ! -d ./public/.git ]
   then
   echo -e "\n[task] Public folder doesn't seem to be setup. Setting up..."
