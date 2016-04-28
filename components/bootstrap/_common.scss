@@ -1,11 +1,25 @@
+@import "_img-variables";
+
 body{
-  background-color: $gray-lighter;
+  background-color: #fff;
+  > .main {
+    background-color: $gray-lighter;
+    padding: 2rem 0;
+  }
+}
+
+.jumbotron {
+  margin-bottom: 0;
 }
 
 .header{
-  background: $brand-primary;
+  background-image: url($walking-people-gradient-uri);
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 0;
-  color: $body-bg;
+  color: #fff;
+  background-position: center -130px;
+  max-height: 470px;
 
   &.jumbotron{
     padding-top: 2em;

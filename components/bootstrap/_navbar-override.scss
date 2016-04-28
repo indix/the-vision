@@ -1,11 +1,88 @@
+@import "_img-variables";
+
 .ix-header-navbar{
-	background-color: $gray-dark;
-	border-bottom: 5px solid $gray;
+  background-color: $gray-dark;
+  border-bottom: 5px solid $ix-brand;
+
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .ix-logo {
+    width: 90px;
+    height: 29px;
+    background-size: 90px;
+    margin: 0 5px;
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-image: url($logo-red-uri);
+  }
 }
 
 .ix-footer-navbar{
-	background-color: $gray-dark;
-	border-top: 5px solid $gray;
-	margin-top: 2em;
-	text-align: center;
+  background-color: #fff;
+  border-top: 1px solid #DEDEDE;
+
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .ix-logo {
+    background-image: url($logo-footer-grey-uri);
+    background-repeat: no-repeat;
+    background-size: auto 55px;
+    height: 55px;
+    min-width: 185px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+
+  .list-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: none;
+    margin-top: 35px;
+
+    a {
+      color: $gray-average;
+    }
+  }
+
+  .social-icons{
+    display: flex;
+    justify-content: space-between;
+    width: 140px;
+    margin: auto;
+    float: right;
+    margin-top: 30px;
+  }
+  .social-icons a{
+    background-image: url($footer-social-icons-uri);
+    height: 32px;
+    width: 32px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: auto 29px;
+    margin-right: 10px;
+    opacity: 0.6;
+  }
+  .social-icons a:hover{
+    opacity: 1;
+  }
+  .social-icons a:last-child{
+    margin-right: 0px;
+  }
+  .social-icons a.facebook{
+    background-position: 9px 0px;
+  }
+  .social-icons a.twitter{
+    background-position: -32px 0px;
+  }
+  .social-icons a.linkedin{
+    background-position: -79px 0px;
+  }
 }

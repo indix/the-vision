@@ -4,47 +4,58 @@
       .col-sm-12
         %h1 Header and Footer
         %h4.lead For the navigation and secondary links
-.container
-  .row
-    .col-sm-12
-      %h3 Header
-      %hr/
-      .card.card-block
-        .ix-header-navbar
-          .container
-            .row
-              %nav.navbar.navbar-dark.bg-inverse
-                %a.navbar-brand{:href => "/"}
-                  Indix Product
-                %ul.nav.navbar-nav
-                  %li.nav-item
-                    %a.nav-link{:href => "javascript: void(0);"} Getting Started
-                  %li.nav-item
-                    .dropdown
-                      %a.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "javascript: void(0);"} Components
-                      .dropdown-menu
-                        %a.dropdown-item{:href => "javascript: void(0);"} Link 1
-                        %a.dropdown-item{:href => "javascript: void(0);"} Link 2
-                        %a.dropdown-item{:href => "javascript: void(0);"} Link 3
-                  %li.nav-item
-                    %a.nav-link{:href => "javascript: void(0);"} Contribute
-                  %li.nav-item.pull-xs-right
-                    .nav-link Version 10.0
+.main
+  .container
+    .row
+      .col-sm-12
+        %h3 Header
+        %hr/
+        .card.card-block
+          .ix-header-navbar
+            .container
+              .row
+                %nav.navbar.navbar-dark.bg-inverse
+                  %a.navbar-brand{:href => "/"}
+                    .ix-logo
+                  %ul.nav.navbar-nav
+                    %li.nav-item
+                      %a.nav-link{:href => "javascript: void(0);"} Getting Started
+                    %li.nav-item
+                      .dropdown
+                        %a.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "javascript: void(0);"} Components
+                        .dropdown-menu
+                          %a.dropdown-item{:href => "javascript: void(0);"} Link 1
+                          %a.dropdown-item{:href => "javascript: void(0);"} Link 2
+                          %a.dropdown-item{:href => "javascript: void(0);"} Link 3
+                    %li.nav-item
+                      %a.nav-link{:href => "javascript: void(0);"} Contribute
+                    %li.nav-item.pull-xs-right
+                      .nav-link Version 10.0
+
+          %br
+          %p For most general purpose usage, the header is in fixed width. This can be customized to fluid layout using that standard bootstrap classes. The best way to understand the code for this is to do an Inspect Element and copy/paste to your project.
 
         %br
-        %p For most general purpose usage, the header is in fixed width. This can be customized to fluid layout using that standard bootstrap classes. The best way to understand the code for this is to do an Inspect Element and copy/paste to your project.
 
-      %br
+        %h3 Footer
+        %hr/
+        .card.card-block
+          .ix-footer-navbar
+            .container
+              .row.navbar
+                .col-md-2
+                  .ix-logo
+                .col-md-6.col-md-offset-1
+                  .list-links
+                    %a© 2016 Indix ™
+                    %a{:href => "http://indix.com/copyright" } Copyright
+                    %a{:href => "http://indix.com/privacy" } Privacy
+                    %a{:href => "http://indix.com/about-indix/contact/" } Contact
+                .col-md-2.col-md-offset-1
+                  .social-icons
+                    %a.facebook{:href => "https://www.facebook.com/indixco", :target => "_blank"}
+                    %a.twitter{:href => "https://twitter.com/indix", :target => "_blank"}
+                    %a.linkedin{:href => "http://www.linkedin.com/company/indix", :target => "_blank"}
 
-      %h3 Footer
-      %hr/
-      .card.card-block
-        .ix-footer-navbar
-          .container
-            .row
-              %nav.navbar.navbar-dark.bg-inverse
-                Made with love by
-                %img.ix-logo{:src => "./images/ix-logo.png"}
-
-        %br
-        %p For most general purpose usage, the footer is in fixed width. This can be customized to fluid layout using that standard bootstrap classes. The best way to understand the code for this is to do an Inspect Element and copy/paste to your project.
+          %br
+          %p For most general purpose usage, the footer is in fixed width. This can be customized to fluid layout using that standard bootstrap classes. The best way to understand the code for this is to do an Inspect Element and copy/paste to your project.
