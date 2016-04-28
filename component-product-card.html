@@ -13,7 +13,6 @@
   <head>
     <meta charset="utf-8">
     <title>The VISION - Indix UI Framework</title>
-    <div id="title"></div>
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements-->
@@ -27,7 +26,7 @@
     <div class="ix-header-navbar">
       <div class="container">
         <div class="row">
-          <nav class="navbar navbar-dark bg-inverse"><a href="/" class="navbar-brand"><img src="./images/ix-logo.png" class="ix-logo" /> Open Source</a>
+          <nav class="navbar navbar-dark bg-inverse"><a href="/" class="navbar-brand"><div class="ix-logo"></div> Open Source</a>
             <ul class="nav navbar-nav">
               <li class="nav-item"><a href="index.html" class="nav-link">Getting Started</a></li>
               <li class="nav-item">
@@ -59,55 +58,52 @@
     </div>
   </div>
 </div>
-<div class='container'>
-  <div class='row'>
-    <div class='col-sm-12'>
-      <h4>Usage</h4>
-      <hr>
-      <div class='card card-block'>
-        <p>The product card is a consistent reperesentation of a product with it's most critical attributes. The display is quite flexible to adapt to most common use cases.</p>
-        <p>
-          <b>Code:</b>
-          <pre>var productCard = &lt;ProductCard
-          title=&quot;Asus Zenfone&quot;
-          price=&quot;$300&quot;
-          image=&quot;http://img6a.flixcart.com/imae9tftbfdcxzng.jpeg&quot;
-          link=&quot;http://www.flipkart.com/asus-zenfone&quot;/&gt;;
-          <br>
-          ReactDOM.render(productCard, document.getElementById('#product-card-example'));</pre>
-        </p>
+<div class='main'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-sm-12'>
+        <h4>Usage</h4>
+        <hr>
+        <div class='card card-block'>
+          <p>The product card is a consistent reperesentation of a product with it's most critical attributes. The display is quite flexible to adapt to most common use cases.</p>
+          <p>
+            <b>Code:</b>
+          </p>
+          <pre class='code'>var productCard = (&#x000A;  &lt;ProductCard&#x000A;    type="buy-button"&#x000A;    title="Asus Zenfone"&#x000A;    price="$300"&#x000A;    image="http://img6a.flixcart.com/imae9tftbfdcxzng.jpeg"&#x000A;    onClick={showMoreInfo}&#x000A;  /&gt;&#x000A;)&#x000A;<br/>&#x000A;var productCard = (&#x000A;  &lt;ProductCard&#x000A;    type="info"&#x000A;    title=&quot;Asus Zenfone&quot; // (required)&#x000A;    brand="Asus"&#x000A;    offers={20}&#x000A;    price="$300 - $375"&#x000A;    image="http://img6a.flixcart.com/imae9tftbfdcxzng.jpeg"&#x000A;    stores={2}&#x000A;  /&gt;&#x000A;)&#x000A;<br/>&#x000A;ReactDOM.render(productCard, document.getElementById('#product-card-example'));
+          <div class='code-type'>Javascript</div></pre>
+        </div>
       </div>
-    </div>
-    <div class='col-sm-12'>
-      <br>
-      <h4>3 per row</h4>
-      <hr>
-    </div>
-    <div class='col-sm-4' id='product-card-example-1'>
-      <!-- Container to render example -->
-    </div>
-    <div class='col-sm-4' id='product-card-example-2'>
-      <!-- Container to render example -->
-    </div>
-    <div class='col-sm-4' id='product-card-example-3'>
-      <!-- Container to render example -->
-    </div>
-    <div class='col-sm-12'>
-      <br>
-      <h4>4 per row</h4>
-      <hr>
-    </div>
-    <div class='col-sm-3' id='product-card-example-4'>
-      <!-- Container to render example -->
-    </div>
-    <div class='col-sm-3' id='product-card-example-5'>
-      <!-- Container to render example -->
-    </div>
-    <div class='col-sm-3' id='product-card-example-6'>
-      <!-- Container to render example -->
-    </div>
-    <div class='col-sm-3' id='product-card-example-7'>
-      <!-- Container to render example -->
+      <div class='col-sm-12'>
+        <br>
+        <h4>3 per row</h4>
+        <hr>
+      </div>
+      <div class='col-sm-4' id='product-card-example-1'>
+        <!-- Container to render example -->
+      </div>
+      <div class='col-sm-4' id='product-card-example-2'>
+        <!-- Container to render example -->
+      </div>
+      <div class='col-sm-4' id='product-card-example-3'>
+        <!-- Container to render example -->
+      </div>
+      <div class='col-sm-12'>
+        <br>
+        <h4>4 per row</h4>
+        <hr>
+      </div>
+      <div class='col-sm-3' id='product-card-example-4'>
+        <!-- Container to render example -->
+      </div>
+      <div class='col-sm-3' id='product-card-example-5'>
+        <!-- Container to render example -->
+      </div>
+      <div class='col-sm-3' id='product-card-example-6'>
+        <!-- Container to render example -->
+      </div>
+      <div class='col-sm-3' id='product-card-example-7'>
+        <!-- Container to render example -->
+      </div>
     </div>
   </div>
 </div>
@@ -115,10 +111,28 @@
 
     <div class="ix-footer-navbar">
       <div class="container">
-        <div class="row">
-          <nav class="navbar navbar-dark bg-inverse">
-            Made with love by <img src="./images/ix-logo.png" class="ix-logo" />
-          </nav>
+        <div class="row navbar">
+          <div class="col-md-2">
+            <div class="ix-logo"></div>
+          </div>
+          <div class="col-md-6 col-md-offset-1">
+            <div class="list-links">
+              <a>© 2016 Indix ™</a>
+              <a href="http://indix.com/copyright">Copyright</a>
+              <a href="http://indix.com/privacy">Privacy</a>
+              <a href="http://indix.com/about-indix/contact/">Contact</a>
+              <!-- <a target="_blank" href="http://indix.com/api/terms">Terms</a> -->
+              <!-- <a target="_blank" href="http://indix.com/sla?s=3dk7gb">SLA</a> -->
+              <!-- <a target="_blank" href="http://indix.com/uptime">API Service Status</a> -->
+            </div>
+          </div>
+          <div class="col-md-2 col-md-offset-1">
+            <div class="social-icons">
+              <a href="https://www.facebook.com/indixco" target="_blank" class="facebook"></a>
+              <a href="https://twitter.com/indix" target="_blank" class="twitter"></a>
+              <a href="http://www.linkedin.com/company/indix" target="_blank" class="linkedin"></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

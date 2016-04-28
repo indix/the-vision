@@ -11,9 +11,3 @@
   #home-hero-section .ix-logo {
     width: 60px;
     margin: -4px 0px 0px 5px; }
-
-.ix-header-navbar .ix-logo,
-.ix-footer-navbar .ix-logo {
-  width: 60px;
-  margin: -3px 0px 0px 5px;
-  display: inline-block; }

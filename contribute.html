@@ -13,7 +13,6 @@
   <head>
     <meta charset="utf-8">
     <title>The VISION - Indix UI Framework</title>
-    <div id="title"></div>
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements-->
@@ -27,7 +26,7 @@
     <div class="ix-header-navbar">
       <div class="container">
         <div class="row">
-          <nav class="navbar navbar-dark bg-inverse"><a href="/" class="navbar-brand"><img src="./images/ix-logo.png" class="ix-logo" /> Open Source</a>
+          <nav class="navbar navbar-dark bg-inverse"><a href="/" class="navbar-brand"><div class="ix-logo"></div> Open Source</a>
             <ul class="nav navbar-nav">
               <li class="nav-item"><a href="index.html" class="nav-link">Getting Started</a></li>
               <li class="nav-item">
@@ -59,164 +58,166 @@
     </div>
   </div>
 </div>
-<div class='container'>
-  <div class='row'>
-    <div class='col-sm-12'>
-      <div class='card card-block'>
-        <h3 class='card-title'>Development Workflow Setup</h3>
-        <hr>
-        <p>
-          Head over to the
-          <a href='https://github.com/ind9/the-vision'>github project page</a>
-          to checkout the code and set it up. The instructions for the dev setup is documented with the project.
-        </p>
-        <br>
-        <h3 class='card-title'>Overview</h3>
-        <hr>
-        <p>
-          One of the core principles of this project is to make is very easy for an engineer to contribute to this project and be able to make modifications on the fly if components don't fit very well in the existing projects. The following section provides a full overview on how to get started with the contribution. If you need help, please reach out on
-          <code>#design_engineering</code>
-          channel on slack.
-        </p>
-        <br>
-        <h5>Bootstrap Customization</h5>
-        <ul>
-          <li>
-            The
-            <code>bootstrap v^4.0.0-alpha.2</code>
-            npm has been included in the project to get the v4 version.
-          </li>
-          <li>
-            The overrides, are in the
-            <code>components/bootstrap</code>
-            folder.
-          </li>
-          <li>
-            The
-            <code>_variables.scss</code>
-            is one of the most powerful files that allow customization at a global level.
-          </li>
-          <li>
-            For component level overrides, add a new files and include it in
-            <code>bootstrap.scss</code>.
-            An example of this is
-            <code>_navbar-override.scss</code>.
-          </li>
-        </ul>
-        <br>
-        <h5>Middleman</h5>
-        <p>
-          The project uses
-          <a href='https://middlemanapp.com/'>Middleman</a>
-          to house the project.
-        </p>
-        <br>
-        <h5>Components</h5>
-        <p>
-          Components are of two types; There are
-          <b>styled elements</b>
-          and
-          <b>custom components</b>.
-          An example of a styled element is a button, which is just a CSS mod on a bootstrap element. The custom components on the other hand demand a React component of its own.
-        </p>
-        <br>
-        <h5>Technologies</h5>
-        <p>Familiarize yourself with the following technologies to speed up development on the project.</p>
-        <ul>
-          <li>
-            This framework is built with
-            <a href='http://v4-alpha.getbootstrap.com/'>Twitter Bootstrap v4</a>
-            as the base. Be very familiar with this, otherwise, you're about to reinvent the wheel.
-          </li>
-          <li>
-            To organize the components,
-            <a href='https://facebook.github.io/react/'>ReactJS from Facebook</a>
-            is used.
-          </li>
-          <li>
-            The markdown in most views is powered by
-            <a href='http://jade-lang.com/'>Jade</a>.
-          </li>
-          <li>
-            Fonts are loaded from
-            <a href='https://typekit.com/'>Typekit</a>.
-          </li>
-          <li>
-            Development workflows involve
-            <a href='http://gulpjs.com/'>gulp</a>,
-            <a href='https://webpack.github.io/'>webpack</a>
+<div class='main'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-sm-12'>
+        <div class='card card-block'>
+          <h3 class='card-title'>Development Workflow Setup</h3>
+          <hr>
+          <p>
+            Head over to the
+            <a href='https://github.com/ind9/the-vision'>github project page</a>
+            to checkout the code and set it up. The instructions for the dev setup is documented with the project.
+          </p>
+          <br>
+          <h3 class='card-title'>Overview</h3>
+          <hr>
+          <p>
+            One of the core principles of this project is to make is very easy for an engineer to contribute to this project and be able to make modifications on the fly if components don't fit very well in the existing projects. The following section provides a full overview on how to get started with the contribution. If you need help, please reach out on
+            <code>#design_engineering</code>
+            channel on slack.
+          </p>
+          <br>
+          <h5>Bootstrap Customization</h5>
+          <ul>
+            <li>
+              The
+              <code>bootstrap v^4.0.0-alpha.2</code>
+              npm has been included in the project to get the v4 version.
+            </li>
+            <li>
+              The overrides, are in the
+              <code>components/bootstrap</code>
+              folder.
+            </li>
+            <li>
+              The
+              <code>_variables.scss</code>
+              is one of the most powerful files that allow customization at a global level.
+            </li>
+            <li>
+              For component level overrides, add a new files and include it in
+              <code>bootstrap.scss</code>.
+              An example of this is
+              <code>_navbar-override.scss</code>.
+            </li>
+          </ul>
+          <br>
+          <h5>Middleman</h5>
+          <p>
+            The project uses
+            <a href='https://middlemanapp.com/'>Middleman</a>
+            to house the project.
+          </p>
+          <br>
+          <h5>Components</h5>
+          <p>
+            Components are of two types; There are
+            <b>styled elements</b>
             and
-            <a href='https://www.npmjs.com/'>npm</a>.
-          </li>
-        </ul>
-        <br>
-        <h3 class='card-title'>Adding a New Component</h3>
-        <hr>
-        <h5 class='text-danger'>Check bootstrap first, always!</h5>
-        <p class='text-danger'>Bootstap has evolved extremely well and houses so many components that practically fill every basic need. So, before going ahead and creating one, please, please do check if it already exists.</p>
-        <br>
-        <h5>Housing the Component</h5>
-        <p>Every component needs a place in the project, so that it can be developed and showcased. Follow the steps below to do so.</p>
-        <ol>
-          <li>
-            Create a new page under
-            <code>source</code>
-            folder.
-          </li>
-          <li>This page will initially serve as the development environment for the component.</li>
-          <li>Once complete, it can also take in the demonstration and documentation for that component.</li>
-        </ol>
-        <br>
-        <h5>Adding a Styled Element</h5>
-        <ol>
-          <li>
-            Refer to the existing customizations in the
-            <code>components/bootstrap</code>
-            folder.
-          </li>
-          <li>If any of those logically extends the customization, then add the code there. Else, create a new file for it.</li>
-          <li>Check the details below in the document to get details about how to how to showcase it.</li>
-        </ol>
-        <br>
-        <h5>Adding a Custom Component</h5>
-        <ol>
-          <li>
-            Create a new component folder under the
-            <code>components</code>
-            folder.
-          </li>
-          <li>Create the javascript file that powers the functionality of the component. Be sure to make this a react component.</li>
-          <li>Add styles to the same folder.</li>
-          <li>
-            Add a reference to the components in
-            <code>components/core.js</code>,
-            so that it's bundled with the output file, which is
-            <code>indix-ui.js</code>.
-          </li>
-        </ol>
-        <br>
-        <h5>Showcasing the Component</h5>
-        <ol>
-          <li>
-            The component can be showcased in the same page as it was developed. For example, if the new component is call
-            <code>breadcrumbs</code>,
-            then the page URL would be
-            <code>/breadcrumbs.html</code>.
-          </li>
-          <li>Add documentation around how to use this component in the same page, and voila, you're done!</li>
-        </ol>
-        <br>
-        <h5>Pull Requests</h5>
-        <p>The final step is to get your code in. Remember, never commit to master. Develop everything in a branch, have it reviewed by one of the contributors on this project and merge it.</p>
-        <br>
-        <h3>Publishing Documentation to Github</h3>
-        <hr>
-        Run
-        <code>npm run publish-page -- "&lt;commit msg&gt;"</code>
-        <br>
-        <center>
-          <img src='./images/contribute-force.jpg'>
-        </center>
+            <b>custom components</b>.
+            An example of a styled element is a button, which is just a CSS mod on a bootstrap element. The custom components on the other hand demand a React component of its own.
+          </p>
+          <br>
+          <h5>Technologies</h5>
+          <p>Familiarize yourself with the following technologies to speed up development on the project.</p>
+          <ul>
+            <li>
+              This framework is built with
+              <a href='http://v4-alpha.getbootstrap.com/'>Twitter Bootstrap v4</a>
+              as the base. Be very familiar with this, otherwise, you're about to reinvent the wheel.
+            </li>
+            <li>
+              To organize the components,
+              <a href='https://facebook.github.io/react/'>ReactJS from Facebook</a>
+              is used.
+            </li>
+            <li>
+              The markdown in most views is powered by
+              <a href='http://jade-lang.com/'>Jade</a>.
+            </li>
+            <li>
+              Fonts are loaded from
+              <a href='https://typekit.com/'>Typekit</a>.
+            </li>
+            <li>
+              Development workflows involve
+              <a href='http://gulpjs.com/'>gulp</a>,
+              <a href='https://webpack.github.io/'>webpack</a>
+              and
+              <a href='https://www.npmjs.com/'>npm</a>.
+            </li>
+          </ul>
+          <br>
+          <h3 class='card-title'>Adding a New Component</h3>
+          <hr>
+          <h5 class='text-danger'>Check bootstrap first, always!</h5>
+          <p class='text-danger'>Bootstap has evolved extremely well and houses so many components that practically fill every basic need. So, before going ahead and creating one, please, please do check if it already exists.</p>
+          <br>
+          <h5>Housing the Component</h5>
+          <p>Every component needs a place in the project, so that it can be developed and showcased. Follow the steps below to do so.</p>
+          <ol>
+            <li>
+              Create a new page under
+              <code>source</code>
+              folder.
+            </li>
+            <li>This page will initially serve as the development environment for the component.</li>
+            <li>Once complete, it can also take in the demonstration and documentation for that component.</li>
+          </ol>
+          <br>
+          <h5>Adding a Styled Element</h5>
+          <ol>
+            <li>
+              Refer to the existing customizations in the
+              <code>components/bootstrap</code>
+              folder.
+            </li>
+            <li>If any of those logically extends the customization, then add the code there. Else, create a new file for it.</li>
+            <li>Check the details below in the document to get details about how to how to showcase it.</li>
+          </ol>
+          <br>
+          <h5>Adding a Custom Component</h5>
+          <ol>
+            <li>
+              Create a new component folder under the
+              <code>components</code>
+              folder.
+            </li>
+            <li>Create the javascript file that powers the functionality of the component. Be sure to make this a react component.</li>
+            <li>Add styles to the same folder.</li>
+            <li>
+              Add a reference to the components in
+              <code>components/core.js</code>,
+              so that it's bundled with the output file, which is
+              <code>indix-ui.js</code>.
+            </li>
+          </ol>
+          <br>
+          <h5>Showcasing the Component</h5>
+          <ol>
+            <li>
+              The component can be showcased in the same page as it was developed. For example, if the new component is call
+              <code>breadcrumbs</code>,
+              then the page URL would be
+              <code>/breadcrumbs.html</code>.
+            </li>
+            <li>Add documentation around how to use this component in the same page, and voila, you're done!</li>
+          </ol>
+          <br>
+          <h5>Pull Requests</h5>
+          <p>The final step is to get your code in. Remember, never commit to master. Develop everything in a branch, have it reviewed by one of the contributors on this project and merge it.</p>
+          <br>
+          <h3>Publishing Documentation to Github</h3>
+          <hr>
+          Run
+          <code>npm run publish-page -- "&lt;commit msg&gt;"</code>
+          <br>
+          <center>
+            <img src='./images/contribute-force.jpg'>
+          </center>
+        </div>
       </div>
     </div>
   </div>
@@ -225,10 +226,28 @@
 
     <div class="ix-footer-navbar">
       <div class="container">
-        <div class="row">
-          <nav class="navbar navbar-dark bg-inverse">
-            Made with love by <img src="./images/ix-logo.png" class="ix-logo" />
-          </nav>
+        <div class="row navbar">
+          <div class="col-md-2">
+            <div class="ix-logo"></div>
+          </div>
+          <div class="col-md-6 col-md-offset-1">
+            <div class="list-links">
+              <a>© 2016 Indix ™</a>
+              <a href="http://indix.com/copyright">Copyright</a>
+              <a href="http://indix.com/privacy">Privacy</a>
+              <a href="http://indix.com/about-indix/contact/">Contact</a>
+              <!-- <a target="_blank" href="http://indix.com/api/terms">Terms</a> -->
+              <!-- <a target="_blank" href="http://indix.com/sla?s=3dk7gb">SLA</a> -->
+              <!-- <a target="_blank" href="http://indix.com/uptime">API Service Status</a> -->
+            </div>
+          </div>
+          <div class="col-md-2 col-md-offset-1">
+            <div class="social-icons">
+              <a href="https://www.facebook.com/indixco" target="_blank" class="facebook"></a>
+              <a href="https://twitter.com/indix" target="_blank" class="twitter"></a>
+              <a href="http://www.linkedin.com/company/indix" target="_blank" class="linkedin"></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
