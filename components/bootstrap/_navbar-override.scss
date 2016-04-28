@@ -22,7 +22,7 @@
 
 .ix-footer-navbar{
   background-color: #fff;
-  border-top: 5px solid $gray-light;
+  border-top: 1px solid #DEDEDE;
 
   .navbar {
     padding: 0.8rem 1rem;
@@ -33,6 +33,7 @@
     background-repeat: no-repeat;
     background-size: auto 55px;
     height: 55px;
+    min-width: 185px;
     margin-top: 20px;
     margin-bottom: 30px;
   }
@@ -44,6 +45,7 @@
     font-size: 14px;
     font-weight: 400;
     text-transform: none;
+    margin-top: 35px;
 
     a {
       color: $gray-average;
@@ -53,7 +55,7 @@
   .social-icons{
     display: flex;
     justify-content: space-between;
-    width: 260px;
+    width: 140px;
     margin: auto;
     float: right;
     margin-top: 30px;

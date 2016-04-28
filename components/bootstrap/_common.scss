@@ -17,7 +17,9 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0;
-  color: $body-bg;
+  color: #fff;
+  background-position: center -130px;
+  max-height: 470px;
 
   &.jumbotron{
     padding-top: 2em;

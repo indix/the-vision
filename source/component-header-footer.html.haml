@@ -42,18 +42,20 @@
         .card.card-block
           .ix-footer-navbar
             .container
-              .row
-                %nav.navbar
+              .row.navbar
+                .col-md-2
+                  .ix-logo
+                .col-md-6.col-md-offset-1
                   .list-links
                     %a© 2016 Indix ™
                     %a{:href => "http://indix.com/copyright" } Copyright
                     %a{:href => "http://indix.com/privacy" } Privacy
                     %a{:href => "http://indix.com/about-indix/contact/" } Contact
+                .col-md-2.col-md-offset-1
                   .social-icons
                     %a.facebook{:href => "https://www.facebook.com/indixco", :target => "_blank"}
                     %a.twitter{:href => "https://twitter.com/indix", :target => "_blank"}
                     %a.linkedin{:href => "http://www.linkedin.com/company/indix", :target => "_blank"}
-                  .ix-logo
 
           %br
           %p For most general purpose usage, the footer is in fixed width. This can be customized to fluid layout using that standard bootstrap classes. The best way to understand the code for this is to do an Inspect Element and copy/paste to your project.
