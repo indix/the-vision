@@ -25,6 +25,20 @@
                   %button.btn.btn-primary{:type => "button"} Primary
                   %td
                     %code &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
+              %tr
+                %td
+                  %button.btn.btn-primary.btn-shadow{:type => "button"} Primary shadow
+                  %td
+                    %code
+                      :escaped
+                        <button type="button" class="btn btn-primary btn-shadow">Primary shadow</button>
+              %tr
+                %td
+                  %button.btn.btn-primary.disabled{:type => "button"} Primary disabled
+                  %td
+                    %code
+                      :escaped
+                        <button type="button" class="btn btn-primary disabled" disabled>Primary disabled</button>
                 %tr
                   %td
                     %button.btn.btn-secondary{:type => "button"} Secondary

@@ -5,6 +5,7 @@
  */
 
 // Core variables and mixins
+// @import "node_modules/bootstrap/scss/variables";
 @import "variables";
 @import "node_modules/bootstrap/scss/mixins";
 
@@ -21,6 +22,7 @@
 @import "node_modules/bootstrap/scss/tables";
 @import "node_modules/bootstrap/scss/forms";
 @import "node_modules/bootstrap/scss/buttons";
+@import "buttons-override";
 
 // Components
 @import "node_modules/bootstrap/scss/animation";
