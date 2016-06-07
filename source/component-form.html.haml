@@ -107,6 +107,7 @@
       .col-sm-12
         .card.card-block
           %h4.card-title Radio Buttons
+          Radio buttons must always be accompanied by a span tag and surrounded by a label tag
           %table.table
             %thead
               %tr
@@ -115,22 +116,46 @@
             %tbody
               %tr
                 %td
-                  .radio
-                    %label
-                      %input{:checked => "", :type => "radio", :value => "option1"}>/
-                      \&nbsp;Weekdays
+                  %label
+                    %input{:type => "radio", :name => "radio"}
+                    %span
                 %td
-                  %code &lt;div class=&quot;radio&quot;&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; value=&quot;option1&quot; checked=&quot;&quot;&gt;&amp;nbsp;Weekdays&lt;/label&gt;&lt;/div&gt;
+                  %code
+                    :escaped
+                      <label><input type="radio" /><span></span></label>
               %tr
                 %td
-                  .radio.disabled
-                    %label
-                      %input{:disabled => "", :type => "radio", :value => "option2"}>/
-                      \&nbsp;Weekends
+                  %label
+                    %input{:type => "radio", :name => "radio"}
+                    %span
+                    %span.label-text With text
                 %td
-                  %code &lt;div class=&quot;radio disabled&quot;&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; value=&quot;option2&quot; disabled=&quot;&quot;&gt;&amp;nbsp;Weekends&lt;/label&gt;&lt;/div&gt;
+                  %code
+                    :escaped
+                      <label><input type="radio" /><span></span><span class="label-text">With text</span></label>
+              %tr
+                %td
+                  %label
+                    %input{:type => "radio", :name => "radio", :disabled => "disabled"}
+                    %span
+                    %span.label-text Disabled
+                %td
+                  %code
+                    :escaped
+                      <label><input type="radio" disabled/><span></span><span class="label-text">Disabled</span></label>
+              %tr
+                %td
+                  %label
+                    %input{:type => "radio", :disabled => "disabled", :checked => "checked"}
+                    %span
+                    %span.label-text Checked Disabled
+                %td
+                  %code
+                    :escaped
+                      <label><input type="radio" disabled checked/><span></span><span class="label-text">Checked Disabled</span></label>
         .card.card-block
           %h4.card-title Checkbox
+          Radio buttons must always be accompanied by a span tag and surrounded by a label tag
           %table.table
             %thead
               %tr
@@ -139,9 +164,11 @@
             %tbody
               %tr
                 %td
-                  .checkbox
-                    %label
-                      %input{:type => "checkbox"}/
-                      I agree to the terms
+                  %label
+                    %input{:type => "checkbox"}
+                    %span
+                    %span.label-text Some text
                 %td
-                  %code &lt;div class=&quot;checkbox&quot;&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt; I agree to the terms&lt;/label&gt;&lt;/div&gt;
+                  %code
+                    :escaped
+                      <label><input type="checkbox" /><span></span><span class="label-text">Some text</span></label>
