@@ -1,0 +1,47 @@
+@import "_img-variables";
+
+input[type=checkbox] {
+  display: none;
+
+  & + span {
+    cursor: pointer;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    position: relative;
+    top: 3px;
+    background-color: #fff;
+    background-image: url($check-icon);
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: 2px;
+    border: 1px solid $radio-border;
+
+    transition: all .2s linear;
+  }
+
+  &:checked + span {
+    border-color: transparent;
+    background-color: $radio-color;
+  }
+
+  &:disabled,
+  &.disabled {
+    ~ * {
+      color: $radio-disabled-text;
+    }
+
+    & + span {
+      border-color: transparent;
+      background-image: none;
+      background-color: $radio-disabled;
+    }
+
+    &:checked + span {
+      background-color: $radio-color;
+      background-image: url($check-icon);
+      opacity: 0.5;
+    }
+  }
+}

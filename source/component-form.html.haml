@@ -172,3 +172,23 @@
                   %code
                     :escaped
                       <label><input type="checkbox" /><span></span><span class="label-text">Some text</span></label>
+              %tr
+                %td
+                  %label
+                    %input{:type => "checkbox", :disabled => "disabled"}
+                    %span
+                    %span.label-text Disabled
+                %td
+                  %code
+                    :escaped
+                      <label><input type="checkbox" disabled/><span></span><span class="label-text">Disabled</span></label>
+              %tr
+                %td
+                  %label
+                    %input{:type => "checkbox", :disabled => "disabled", :checked => "checked"}
+                    %span
+                    %span.label-text Checked disabled
+                %td
+                  %code
+                    :escaped
+                      <label><input type="checkbox" disabled checked/><span></span><span class="label-text">Some text</span></label>
