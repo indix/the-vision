@@ -30,7 +30,7 @@ input[type=radio] {
 
     & + span {
       border-color: $radio-disabled;
-      box-shadow: none;
+      box-shadow: 0 0 0 1px $radio-disabled;
       background-color: $radio-disabled;
     }
 
