@@ -1,0 +1,59 @@
+.jumbotron.header
+  .container
+    .row
+      .col-sm-12
+        %h1 Other Elements
+        %h4.lead A collection of different elements
+.main
+  .container
+    .row
+      .col-sm-12
+        %h2 Table
+        %hr/
+        .card.card-block
+          %h4 Standard Table
+          %hr/
+          %p For most general purpose usage.
+          %table.table
+            %thead
+              %tr
+                %th Heder
+                %th header two
+                %th header three
+                %th Last updated on info
+                %th Plan
+            %tbody
+              %tr
+                %td Lorum Ipsum
+                %td other info
+                %td Some more info here
+                %td 05-03-2016
+                %td Standard
+              %tr
+                %td Lorum Ipsum
+                %td other info
+                %td Some more info here
+                %td 05-03-2016
+                %td Standard
+              %tr
+                %td Lorum Ipsum
+                %td other info
+                %td Some more info here
+                %td 05-03-2016
+                %td Standard
+
+          %p Add class "table" and follow the correct structure
+          %pre.code
+            =preserve do
+              :escaped
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Header</td>
+                      ...
+                    ...
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Value 1</td>
+                      ...
