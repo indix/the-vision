@@ -3,14 +3,14 @@
 
   &:hover {
     border-color: transparent;
-    background-color: $brand-primary-hover;
+    background-color: $button-primary-hover;
   }
 
   &:disabled,
   &.disabled {
     border-color: transparent;
-    color: $brand-primary-diabled-text;
-    background-color: $brand-primary-diabled;
+    color: $button-primary-diabled-text;
+    background-color: $button-primary-diabled;
   }
 
   &:focus,
@@ -19,7 +19,7 @@
   &.active {
     &,
     &:hover {
-      background-color: darken($brand-primary, 20%);
+      background-color: darken($button-primary, 20%);
       border-color: transparent;
     }
   }
@@ -27,10 +27,10 @@
 
 .btn.btn-shadow {
   &.btn-primary {
-    box-shadow: 0 0 20px rgba($brand-primary, 0.3);
+    box-shadow: 0 0 20px rgba($button-primary, 0.3);
 
     &:hover {
-      box-shadow: 0 0 20px rgba($brand-primary-hover, 0.3);
+      box-shadow: 0 0 20px rgba($button-primary-hover, 0.3);
     }
 
     &:disabled,

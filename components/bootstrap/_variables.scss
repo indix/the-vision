@@ -1,10 +1,17 @@
 $gray-average: #888;
+
 $ix-brand: #EF3829;
+$ix-brand-light: #ef4b3e;
+$ix-brand-lighter: #ec695e;
 
 $brand-primary: #43a047;
-$brand-primary-hover: #53aa56;
-$brand-primary-diabled: #80b782;
-$brand-primary-diabled-text: #c6ddc7;
+$brand-primary-light: #53aa56;
+$brand-primary-lighter: #80b782;
+
+$button-primary: $brand-primary;
+$button-primary-hover: $brand-primary-light;
+$button-primary-diabled: $brand-primary-lighter;
+$button-primary-diabled-text: #c6ddc7;
 
 $radio-color: $brand-primary;
 $radio-border: #bdbdbd;
