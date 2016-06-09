@@ -50,19 +50,12 @@
       </div>
     </div>
 
-    <div class='jumbotron' id='home-hero-section'>
+    <div class='jumbotron header'>
   <div class='container'>
     <div class='row'>
       <div class='col-sm-12'>
-        <h1>
-          The
-          <b>VISION</b>
-        </h1>
-        <h4 class='lead'>
-          The front end framework for an
-          <img class='ix-logo' src='./images/ix-logo.png'>
-          experience
-        </h4>
+        <h1>Table</h1>
+        <h4 class='lead'>For display of tabular data</h4>
       </div>
     </div>
   </div>
@@ -70,84 +63,47 @@
 <div class='main'>
   <div class='container'>
     <div class='row'>
-      <div class='col-sm-8'>
-        <h2>Getting Started</h2>
-        <hr>
+      <div class='col-sm-12'>
         <div class='card card-block'>
-          <h4 class='card-title'>Overview</h4>
+          <h4>Standard Table</h4>
           <hr>
-          <ul>
-            <li>
-              This framework is built with
-              <a href='http://v4-alpha.getbootstrap.com/'>Twitter Bootstrap v4</a>
-              as the base. Please make yourself extremely familiar with that before jumping into this, otherwise, you're about to reinvent the wheel.
-            </li>
-            <li>
-              To organize the components,
-              <a href='https://facebook.github.io/react/'>ReactJS from Facebook</a>
-              is used.
-            </li>
-            <li>
-              Fonts are loaded from
-              <a href='https://typekit.com/'>Typekit</a>.
-            </li>
-          </ul>
-        </div>
-        <div class='card card-block'>
-          <h4 class='card-title'>Installation</h4>
-          <hr>
-          <ol>
-            <li>
-              Install
-              <a href='https://www.npmjs.com/package/the-vision'></a>
-              the-vision npm.
-              <br>
-              <br>
-              <code>npm install the-vision --save</code>
-              <br>
-              <br>
-            </li>
-            <li>
-              Include the script in your app. This packages all necessary functionality and styling.
-              <br>
-              <br>
-              <code>&lt;script src=&quot;/node_modules/the-vision/dist/indix-ui.js&quot;&gt;&lt;/script&gt;</code>
-              <br>
-              <br>
-            </li>
-            <li>
-              Add the typekit script to load fonts.
-              <br>
-              <br>
-              <code>&lt;script src=&quot;https://use.typekit.net/usu2qqi.js&quot;&gt;&lt;/script&gt;</code>
-            </li>
-          </ol>
-          <br>Bingo!
-          You're all set. Check out the components for specific usage details.
-        </div>
-      </div>
-      <div class='col-sm-4'>
-        <h2>Components</h2>
-        <hr>
-        <div class='card card-block'>
-          <p>The following components are ready for use. Pick one to find out how.</p>
-          <ul>
-            <li>
-              <a href='component-form.html'>Form Elements</a>
-            </li>
-            <li>
-              <a href='component-table.html'>Table</a>
-            </li>
-            <li>
-              <a href='component-typography.html'>Typography</a>
-            </li>
-            <li>
-              <a href='component-product-card.html'>Product Card</a>
-            </li>
-            <li>
-              <a href='component-header-footer.html'>Header & Footer</a>
-            </li>
-          </ul>
+          <p>For most general purpose usage.</p>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Heder</th>
+                <th>header two</th>
+                <th>header three</th>
+                <th>Last updated on info</th>
+                <th>Plan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lorum Ipsum</td>
+                <td>other info</td>
+                <td>Some more info here</td>
+                <td>05-03-2016</td>
+                <td>Standard</td>
+              </tr>
+              <tr>
+                <td>Lorum Ipsum</td>
+                <td>other info</td>
+                <td>Some more info here</td>
+                <td>05-03-2016</td>
+                <td>Standard</td>
+              </tr>
+              <tr>
+                <td>Lorum Ipsum</td>
+                <td>other info</td>
+                <td>Some more info here</td>
+                <td>05-03-2016</td>
+                <td>Standard</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Add class "table" and follow the correct structure</p>
+          <pre class='code'>&lt;table class=&quot;table&quot;&gt;&#x000A;  &lt;thead&gt;&#x000A;    &lt;tr&gt;&#x000A;      &lt;th&gt;Header&lt;/td&gt;&#x000A;      ...&#x000A;    ...&#x000A;  &lt;/thead&gt;&#x000A;  &lt;tbody&gt;&#x000A;    &lt;tr&gt;&#x000A;      &lt;td&gt;Value 1&lt;/td&gt;&#x000A;      ...</pre>
         </div>
       </div>
     </div>
