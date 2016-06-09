@@ -35,3 +35,6 @@ Visit [oss.indix.com/the-vision](http://oss.indix.com/the-vision/) for documenta
 
 ####Update the webpage
 Run `npm run publish-page -- "<commit msg>"` to push the static files to `gh-pages` branch.
+
+##Publishing the npm
+Once the `master` branch is ready with the latest source, just trigger [this pipeline](http://build.indix.tv/go/tab/pipeline/history/The-Vision-Publish-NPM) to publish it to the [npm repo](https://www.npmjs.com/package/the-vision).
