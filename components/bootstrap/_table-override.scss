@@ -1,0 +1,27 @@
+table.table {
+  text-align: center;
+
+  thead {
+    font-size: 14px;
+    text-transform: uppercase;
+
+    th {
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: none;
+    }
+  }
+
+  tr {
+    td {
+      border-color: $table-row-border;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    &:first-child td {
+      border-color: $table-header-border;
+    }
+  }
+}

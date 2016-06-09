@@ -1,0 +1,41 @@
+.btn.btn-primary {
+  border-color: transparent;
+
+  &:hover {
+    border-color: transparent;
+    background-color: $button-primary-hover;
+  }
+
+  &:disabled,
+  &.disabled {
+    border-color: transparent;
+    color: $button-primary-diabled-text;
+    background-color: $button-primary-diabled;
+  }
+
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    &,
+    &:hover {
+      background-color: darken($button-primary, 20%);
+      border-color: transparent;
+    }
+  }
+}
+
+.btn.btn-shadow {
+  &.btn-primary {
+    box-shadow: 0 0 20px rgba($button-primary, 0.3);
+
+    &:hover {
+      box-shadow: 0 0 20px rgba($button-primary-hover, 0.3);
+    }
+
+    &:disabled,
+    &.disabled {
+      box-shadow: none;
+    }
+  }
+}

@@ -5,6 +5,7 @@
  */
 
 // Core variables and mixins
+// @import "node_modules/bootstrap/scss/variables";
 @import "variables";
 @import "node_modules/bootstrap/scss/mixins";
 
@@ -22,6 +23,14 @@
 @import "node_modules/bootstrap/scss/forms";
 @import "node_modules/bootstrap/scss/buttons";
 
+// ------ IX
+@import "buttons-override";
+@import "radio-buttons";
+@import "checkbox";
+@import "forms-override";
+@import "table-override";
+@import "type-override";
+
 // Components
 @import "node_modules/bootstrap/scss/animation";
 @import "node_modules/bootstrap/scss/dropdown";
@@ -29,8 +38,9 @@
 @import "node_modules/bootstrap/scss/input-group";
 @import "node_modules/bootstrap/scss/custom-forms";
 @import "node_modules/bootstrap/scss/nav";
-
 @import "node_modules/bootstrap/scss/navbar";
+
+// ------ IX
 @import "navbar-override";
 
 @import "node_modules/bootstrap/scss/card";

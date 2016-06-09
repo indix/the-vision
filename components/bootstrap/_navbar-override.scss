@@ -1,11 +1,17 @@
 @import "_img-variables";
 
 .ix-header-navbar{
-  background-color: $gray-dark;
-  border-bottom: 5px solid $ix-brand;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  position: relative;
 
   .navbar {
     padding: 0.8rem 1rem;
+
+    .nav-link{
+      color: $gray-average;
+      text-transform: uppercase;
+    }
   }
 
   .ix-logo {
