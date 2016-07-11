@@ -3,11 +3,17 @@
 body{
   background-color: #fff;
   font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-style: 1em;
+  font-size: 16px;
 
   > .main {
     background-color: $gray-lighter;
     padding: 2rem 0;
+  }
+}
+
+@media(max-width: map-get($grid-breakpoints, xl)) {
+  body {
+    font-size: 14px;
   }
 }
 
