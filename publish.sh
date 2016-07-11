@@ -1,4 +1,8 @@
 #!/bin/bash
+message=$1
+if [ -z  "$1" ]; then
+  message="updating pages"
+fi
 
 set -e
 
@@ -18,8 +22,8 @@ echo -e "\n[task] Running webpack"
 echo -e "\n[task] Running middleman"
 middleman build
 cd public
-echo -e "\n[task] Committing all changes with message \"$1\" and pushing it"
+echo -e "\n[task] Committing all changes with message \"$message\" and pushing it"
 git add -A
-git commit -m "$1"
+git commit -m "$message"
 git pull --rebase
 git push origin gh-pages
