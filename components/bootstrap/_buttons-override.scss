@@ -7,8 +7,8 @@
     background-color: $button-primary-hover;
   }
 
-  &:disabled,
-  &.disabled {
+  &[disabled],
+  &.disabled, {
     border-color: transparent;
     color: $button-primary-diabled-text;
     background-color: $button-primary-diabled;
