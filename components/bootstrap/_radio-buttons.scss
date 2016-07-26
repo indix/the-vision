@@ -1,44 +1,60 @@
-input[type=radio] {
-  display: none;
+label.c-ix-radio {
+  position: relative;
 
-  & + span {
-    cursor: pointer;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    position: relative;
-    top: 4px;
-    background-color: #fff;
-    border: 5px solid #fff;
-    border-radius: 20px;
-    box-shadow: 0 0 0 1px $radio-border;
+  input[type=radio] {
+    position: absolute;
+    top: 7px;
+    left: 4px;
+    opacity: 0;
 
-    transition: all .2s linear;
-  }
+    & + .c-ix-indicator {
+      cursor: pointer;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      margin-left: 1px;
+      position: relative;
+      top: 4px;
+      background-color: #fff;
+      border: 5px solid #fff;
+      border-radius: 20px;
+      box-shadow: 0 0 0 1px $radio-border;
 
-  &:checked + span {
-    box-shadow: 0 0 0 1px $radio-color;
-    background-color: $radio-color;
-  }
-
-  &.disabled ,
-  &:disabled {
-    ~ * {
-      color: $radio-disabled-text;
+      transition: all .2s linear;
     }
 
-    & + span {
-      border-color: $radio-disabled;
-      box-shadow: 0 0 0 1px $radio-disabled;
-      background-color: $radio-disabled;
-    }
-
-    &:checked + span {
-      border-color: #fff;
+    &:checked + .c-ix-indicator {
       box-shadow: 0 0 0 1px $radio-color;
       background-color: $radio-color;
-      opacity: 0.5;
+    }
+
+    &:focus + .c-ix-indicator {
+      outline: $outline-color auto 5px;
+      outline: -o-focus-ring-color auto 5px;
+      outline: -ms-focus-ring-color auto 5px;
+      outline: -moz-focus-ring-color auto 5px;
+      outline: -webkit-focus-ring-color auto 5px;
+    }
+
+    &.disabled ,
+    &:disabled {
+      ~ * {
+        color: $radio-disabled-text;
+      }
+
+      & + .c-ix-indicator {
+        border-color: $radio-disabled;
+        box-shadow: 0 0 0 1px $radio-disabled;
+        background-color: $radio-disabled;
+      }
+
+      &:checked + .c-ix-indicator {
+        border-color: #fff;
+        box-shadow: 0 0 0 1px $radio-color;
+        background-color: $radio-color;
+        opacity: 0.5;
+      }
     }
   }
 }

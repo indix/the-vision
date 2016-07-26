@@ -1,47 +1,62 @@
 @import "_img-variables";
 
-input[type=checkbox] {
-  display: none;
+label.c-ix-checkbox {
+  position: relative;
 
-  & + span {
-    cursor: pointer;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 15px;
-    position: relative;
-    top: 3px;
-    background-color: #fff;
-    background-image: url($check-icon);
-    background-repeat: no-repeat;
-    background-size: 14px;
-    background-position: 2px;
-    border: 1px solid $radio-border;
+  input[type=checkbox] {
+    position: absolute;
+    top: 6px;
+    left: 3px;
+    opacity: 0;
 
-    transition: all .2s linear;
-  }
-
-  &:checked + span {
-    border-color: transparent;
-    background-color: $radio-color;
-  }
-
-  &:disabled,
-  &.disabled {
-    ~ * {
-      color: $radio-disabled-text;
-    }
-
-    & + span {
-      border-color: transparent;
-      background-image: none;
-      background-color: $radio-disabled;
-    }
-
-    &:checked + span {
-      background-color: $radio-color;
+    & + .c-ix-indicator {
+      cursor: pointer;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 15px;
+      position: relative;
+      top: 3px;
+      background-color: #fff;
       background-image: url($check-icon);
-      opacity: 0.5;
+      background-repeat: no-repeat;
+      background-size: 14px;
+      background-position: 2px;
+      border: 1px solid $radio-border;
+
+      transition: all .2s linear;
+    }
+
+    &:checked + .c-ix-indicator {
+      border-color: transparent;
+      background-color: $radio-color;
+    }
+
+    &:focus + .c-ix-indicator {
+      outline: $outline-color auto 5px;
+      outline: -o-focus-ring-color auto 5px;
+      outline: -ms-focus-ring-color auto 5px;
+      outline: -moz-focus-ring-color auto 5px;
+      outline: -webkit-focus-ring-color auto 5px;
+    }
+
+    &:disabled,
+    &.disabled {
+      ~ * {
+        color: $radio-disabled-text;
+      }
+
+      & + .c-ix-indicator {
+        border-color: transparent;
+        background-image: none;
+        background-color: $radio-disabled;
+      }
+
+      &:checked + .c-ix-indicator {
+        background-color: $radio-color;
+        background-image: url($check-icon);
+        opacity: 0.5;
+      }
     }
   }
 }
