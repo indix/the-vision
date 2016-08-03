@@ -55,8 +55,8 @@
   <div class='container'>
     <div class='row'>
       <div class='col-sm-12'>
-        <h1>Product Card</h1>
-        <h4 class='lead'>To showcase product tiles</h4>
+        <h1>Navs</h1>
+        <!-- %h4.lead For display of tabular data -->
       </div>
     </div>
   </div>
@@ -65,47 +65,36 @@
   <div class='container'>
     <div class='row'>
       <div class='col-sm-12'>
-        <h4>Usage</h4>
-        <hr>
         <div class='card card-block'>
-          <p>The product card is a consistent reperesentation of a product with it's most critical attributes. The display is quite flexible to adapt to most common use cases.</p>
-          <p>
-            <b>Code:</b>
-          </p>
-          <pre class='code'>var productCard = (&#x000A;  &lt;ProductCard&#x000A;    type="buy-button"&#x000A;    title="Asus Zenfone"&#x000A;    price="$300"&#x000A;    image="http://img6a.flixcart.com/imae9tftbfdcxzng.jpeg"&#x000A;    onClick={showMoreInfo}&#x000A;  /&gt;&#x000A;)&#x000A;<br/>&#x000A;var productCard = (&#x000A;  &lt;ProductCard&#x000A;    type="info"&#x000A;    title=&quot;Asus Zenfone&quot; // (required)&#x000A;    brand="Asus"&#x000A;    offers={20}&#x000A;    price="$300 - $375"&#x000A;    image="http://img6a.flixcart.com/imae9tftbfdcxzng.jpeg"&#x000A;    stores={2}&#x000A;  /&gt;&#x000A;)&#x000A;<br/>&#x000A;ReactDOM.render(productCard, document.getElementById('#product-card-example'));
-          <div class='code-type'>Javascript</div></pre>
+          <h4>Custom tabs</h4>
+          <hr>
+          <p>Just include .ix-nav-tabs to the bootstrap nav tabs structure</p>
+          <br>
+          <h5>Component</h5>
+          <ul class='nav nav-tabs ix-nav-tabs'>
+            <li class='nav-item'>
+              <a class='nav-link active' href='#home'>Home</a>
+            </li>
+            <li class='nav-item'>
+              <a class='nav-link' href='#profile'>Profile</a>
+            </li>
+            <li class='nav-item'>
+              <a class='nav-link' href='#messages'>Messages</a>
+            </li>
+            <li class='nav-item'>
+              <a class='nav-link' href='#settings'>Settings</a>
+            </li>
+          </ul>
+          <br>
+          <h5>Code</h5>
+          <code>&lt;ul class=&quot;nav nav-tabs ix-nav-tabs&quot;&gt;
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a class=&quot;nav-link active&quot; href=&quot;#home&quot;&gt;Home&lt;/a&gt;
+            &lt;/li&gt;
+            ...
+            ...
+          &lt;/ul&gt;</code>
         </div>
-      </div>
-      <div class='col-sm-12'>
-        <br>
-        <h4>3 per row</h4>
-        <hr>
-      </div>
-      <div class='col-sm-4' id='product-card-example-1'>
-        <!-- Container to render example -->
-      </div>
-      <div class='col-sm-4' id='product-card-example-2'>
-        <!-- Container to render example -->
-      </div>
-      <div class='col-sm-4' id='product-card-example-3'>
-        <!-- Container to render example -->
-      </div>
-      <div class='col-sm-12'>
-        <br>
-        <h4>4 per row</h4>
-        <hr>
-      </div>
-      <div class='col-sm-3' id='product-card-example-4'>
-        <!-- Container to render example -->
-      </div>
-      <div class='col-sm-3' id='product-card-example-5'>
-        <!-- Container to render example -->
-      </div>
-      <div class='col-sm-3' id='product-card-example-6'>
-        <!-- Container to render example -->
-      </div>
-      <div class='col-sm-3' id='product-card-example-7'>
-        <!-- Container to render example -->
       </div>
     </div>
   </div>
