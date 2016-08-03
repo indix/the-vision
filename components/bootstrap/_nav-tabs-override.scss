@@ -1,0 +1,25 @@
+.nav.nav-tabs.ix-nav-tabs {
+  text-transform: uppercase;
+
+  .nav-link {
+    color: $gray-average;
+  }
+
+  .nav-link:focus,
+  .nav-link:hover {
+    border-color: transparent;
+    color: $brand-primary;
+  }
+
+  .nav-item.open .nav-link,
+  .nav-item.open .nav-link:focus,
+  .nav-item.open .nav-link:hover,
+  .nav-link.active,
+  .nav-link.active:focus,
+  .nav-link.active:hover {
+    color: $brand-primary;
+    /* font-weight: 600; */
+    border: none;
+    border-bottom: 3px solid $brand-primary;
+  }
+}

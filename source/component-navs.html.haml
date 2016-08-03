@@ -1,0 +1,36 @@
+.jumbotron.header
+  .container
+    .row
+      .col-sm-12
+        %h1 Navs
+        / %h4.lead For display of tabular data
+.main
+  .container
+    .row
+      .col-sm-12
+        .card.card-block
+          %h4 Custom tabs
+          %hr/
+          %p Just include .ix-nav-tabs to the bootstrap nav tabs structure
+          %br
+          %h5 Component
+          %ul.nav.nav-tabs.ix-nav-tabs
+            %li.nav-item
+              %a.nav-link.active{:href => "#home"} Home
+            %li.nav-item
+              %a.nav-link{:href => "#profile"} Profile
+            %li.nav-item
+              %a.nav-link{:href => "#messages"} Messages
+            %li.nav-item
+              %a.nav-link{:href => "#settings"} Settings
+          %br
+          %h5 Code
+          %code
+            :escaped
+              <ul class="nav nav-tabs ix-nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#home">Home</a>
+                </li>
+                ...
+                ...
+              </ul>
