@@ -19,7 +19,7 @@ label.c-ix-radio {
       background-color: #fff;
       border: 5px solid #fff;
       border-radius: 20px;
-      box-shadow: 0 0 0 1px $radio-border;
+      box-shadow: 0 0 0 1px $gray-average-dark;
 
       transition: all .2s linear;
     }
@@ -40,20 +40,20 @@ label.c-ix-radio {
     &.disabled ,
     &:disabled {
       ~ * {
-        color: $radio-disabled-text;
+        color: $gray-average;
       }
 
       & + .c-ix-indicator {
-        border-color: $radio-disabled;
-        box-shadow: 0 0 0 1px $radio-disabled;
-        background-color: $radio-disabled;
+        cursor: not-allowed;
+        border-color: $gray-average;
+        box-shadow: 0 0 0 1px $gray-average;
+        background-color: $gray-average;
       }
 
       &:checked + .c-ix-indicator {
         border-color: #fff;
-        box-shadow: 0 0 0 1px $radio-color;
-        background-color: $radio-color;
-        opacity: 0.5;
+        box-shadow: 0 0 0 1px $gray-average;
+        background-color: $gray-average;
       }
     }
   }

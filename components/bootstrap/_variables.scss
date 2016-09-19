@@ -4,19 +4,17 @@ $text-color: #333;
 
 $ix-brand: #EF3829;
 $ix-brand-secondary: #58c1e9;
+
 $ix-brand-light: #ef4b3e;
 $ix-brand-lighter: #ec695e;
 
 $brand-success: #43a047;
 $brand-info: $ix-brand-secondary;
 $brand-danger: $ix-brand;
+
 $brand-primary: $brand-info;
 
-$radio-color: $brand-success;
-$radio-border: #bdbdbd;
-$radio-disabled: #e0e0e0;
-$radio-disabled-text: #adadad;
-$radio-disabled-border: #fff;
+$radio-color: $brand-primary;
 
 $table-header-border: #bdbdbd;
 $table-row-border: #eee;

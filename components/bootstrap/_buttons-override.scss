@@ -17,6 +17,10 @@
   @include button-variant(#fff, $brand-success, $brand-success);
 }
 
+.btn-outline-primary {
+  @include button-outline-variant($brand-success);
+}
+
 .btn-primary.btn-shadow {
   @include button-shadow($brand-success);
 }

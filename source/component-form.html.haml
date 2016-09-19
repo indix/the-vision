@@ -39,6 +39,13 @@
                   %code
                     :escaped
                       <button type="button" class="btn btn-primary disabled" disabled>Primary disabled</button>
+              %tr
+                %td
+                  %button.btn.btn-outline-primary{:type => "button"} Primary outlined
+                %td
+                  %code
+                    :escaped
+                      <button type="button" class="btn btn-outline-primary">Primary outlined</button>
                 %tr
                   %td
                     %button.btn.btn-secondary{:type => "button"} Secondary
@@ -59,6 +66,20 @@
                   %button.btn.btn-success{:type => "button"} Success
                 %td
                   %code &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
+              %tr
+                %td
+                  %button.btn.btn-info{:type => "button"} Info
+                %td
+                  %code
+                    :escaped
+                      <button type="button" class="btn btn-info">Info</button>
+              %tr
+                %td
+                  %button.btn.btn-warning{:type => "button"} Warning
+                %td
+                  %code
+                    :escaped
+                      <button type="button" class="btn btn-warning">Warning</button>
               %tr
                 %td
                   %button.btn.btn-danger{:type => "button"} Danger
@@ -117,7 +138,7 @@
               %tr
                 %td
                   %label.c-ix-radio
-                    %input{:type => "radio", :name => "radio"}
+                    %input{:type => "radio", :name => "radio", :checked => "checked"}
                     %span.c-ix-indicator
                 %td
                   %code
