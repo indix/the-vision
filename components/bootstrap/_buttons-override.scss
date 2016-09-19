@@ -1,42 +1,22 @@
-.btn.btn-primary {
-  border-color: transparent;
-  text-transform: uppercase;
+@import "node_modules/bootstrap/scss/mixins/_buttons";
+
+@mixin button-shadow($btn-color) {
+  box-shadow: 0 0 20px rgba($btn-color, 0.3);
 
   &:hover {
-    border-color: transparent;
-    background-color: $button-primary-hover;
+    box-shadow: 0 0 20px rgba(darken($btn-color, 17%), 0.3);
   }
 
-  &[disabled],
-  &.disabled, {
-    border-color: transparent;
-    color: $button-primary-diabled-text;
-    background-color: $button-primary-diabled;
-  }
-
-  &:focus,
-  &.focus,
-  &:active,
-  &.active {
-    &,
-    &:hover {
-      background-color: darken($button-primary, 20%);
-      border-color: transparent;
-    }
+  &:disabled,
+  &.disabled {
+    box-shadow: none;
   }
 }
 
-.btn.btn-shadow {
-  &.btn-primary {
-    box-shadow: 0 0 20px rgba($button-primary, 0.3);
+.btn-primary {
+  @include button-variant(#fff, $brand-success, $brand-success);
+}
 
-    &:hover {
-      box-shadow: 0 0 20px rgba($button-primary-hover, 0.3);
-    }
-
-    &:disabled,
-    &.disabled {
-      box-shadow: none;
-    }
-  }
+.btn-primary.btn-shadow {
+  @include button-shadow($brand-success);
 }

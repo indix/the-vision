@@ -3,19 +3,16 @@ $gray-average-dark: #a9a9a9;
 $text-color: #333;
 
 $ix-brand: #EF3829;
+$ix-brand-secondary: #58c1e9;
 $ix-brand-light: #ef4b3e;
 $ix-brand-lighter: #ec695e;
 
-$brand-primary: #43a047;
-$brand-primary-light: #53aa56;
-$brand-primary-lighter: #80b782;
+$brand-success: #43a047;
+$brand-info: $ix-brand-secondary;
+$brand-danger: $ix-brand;
+$brand-primary: $brand-info;
 
-$button-primary: $brand-primary;
-$button-primary-hover: $brand-primary-light;
-$button-primary-diabled: $brand-primary-lighter;
-$button-primary-diabled-text: #c6ddc7;
-
-$radio-color: $brand-primary;
+$radio-color: $brand-success;
 $radio-border: #bdbdbd;
 $radio-disabled: #e0e0e0;
 $radio-disabled-text: #adadad;
