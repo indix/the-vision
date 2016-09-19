@@ -2,7 +2,9 @@
   text-transform: uppercase;
 
   .nav-link {
-    color: $gray-average;
+    color: $gray-light;
+    border: none;
+    border-bottom: 3px solid transparent;
   }
 
   .nav-link:focus,
