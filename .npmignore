@@ -1,5 +1,6 @@
 # Source files
 unexposed
+node_modules
 
 # Webpage files
 public
