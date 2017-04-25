@@ -16,7 +16,7 @@ var ProductCard = function (_React$Component) {
   function ProductCard(props) {
     _classCallCheck(this, ProductCard);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(ProductCard).call(this, props));
+    return _possibleConstructorReturn(this, (ProductCard.__proto__ || Object.getPrototypeOf(ProductCard)).call(this, props));
   }
 
   _createClass(ProductCard, [{
@@ -98,11 +98,11 @@ var ProductCard = function (_React$Component) {
               this.props.offers,
               " offer",
               this.props.offers === 1 ? '' : 's'
-            ),
-            " from"
+            )
           ), this.props.price && React.createElement(
             "h6",
             { className: "price", key: "price" },
+            "from ",
             this.props.price
           ), this.props.stores && React.createElement(
             "div",
