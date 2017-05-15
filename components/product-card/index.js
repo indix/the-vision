@@ -39,16 +39,16 @@ class ProductCard extends React.Component{
           {
             [
               this.props.brand &&
-              <div className="brand" key="brand">by {this.props.brand}</div>
+              <div className="brand" key="brand">by1 {this.props.brand}</div>
               ,
-              this.props.offers &&
-              <div className="offers" key="offers"><span className="count">{this.props.offers} offer{this.props.offers === 1 ? '' : 's'}</span></div>
+              !isNaN(this.props.offers) && this.props.offers >= 0 &&
+              <div className="offers" key="offers"><span className="count">{this.props.offers} offer{this.props.offers <= 1 ? '' : 's'}</span></div>
               ,
               this.props.price &&
               <h6 className="price" key="price">from {this.props.price}</h6>
               ,
-              this.props.stores &&
-              <div className="stores" key="stores">Available in {this.props.stores} store{this.props.stores === 1 ? '' : 's'}</div>
+              !isNaN(this.props.stores) && this.props.stores >= 0 &&
+              <div className="stores" key="stores">Available in {this.props.stores == 0 ? 'no' : this.props.stores} store{this.props.stores <= 1 ? '' : 's'}</div>
             ]
           }
         </div>

@@ -153,9 +153,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	          [this.props.brand && React.createElement(
 	            "div",
 	            { className: "brand", key: "brand" },
-	            "by ",
+	            "by1 ",
 	            this.props.brand
-	          ), this.props.offers && React.createElement(
+	          ), !isNaN(this.props.offers) && this.props.offers >= 0 && React.createElement(
 	            "div",
 	            { className: "offers", key: "offers" },
 	            React.createElement(
@@ -163,20 +163,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	              { className: "count" },
 	              this.props.offers,
 	              " offer",
-	              this.props.offers === 1 ? '' : 's'
+	              this.props.offers <= 1 ? '' : 's'
 	            )
 	          ), this.props.price && React.createElement(
 	            "h6",
 	            { className: "price", key: "price" },
 	            "from ",
 	            this.props.price
-	          ), this.props.stores && React.createElement(
+	          ), !isNaN(this.props.stores) && this.props.stores >= 0 && React.createElement(
 	            "div",
 	            { className: "stores", key: "stores" },
 	            "Available in ",
-	            this.props.stores,
+	            this.props.stores == 0 ? 'no' : this.props.stores,
 	            " store",
-	            this.props.stores === 1 ? '' : 's'
+	            this.props.stores <= 1 ? '' : 's'
 	          )]
 	        )
 	      );
