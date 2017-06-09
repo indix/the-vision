@@ -1,6 +1,6 @@
 {
   "name": "the-vision",
-  "version": "1.4.0",
+  "version": "1.4.23",
   "description": "A set of reusable UI(react) components",
   "main": "build/index.js",
   "repository": {
@@ -33,6 +33,7 @@
   "scripts": {
     "build": "babel components -d build && webpack --dist",
     "publish-page": "./publish.sh",
+    "pre-publish": "npm run build",
     "watch": "webpack -w"
   },
   "devDependencies": {

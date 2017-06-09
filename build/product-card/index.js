@@ -87,7 +87,7 @@ var ProductCard = function (_React$Component) {
           [this.props.brand && React.createElement(
             "div",
             { className: "brand", key: "brand" },
-            "by1 ",
+            "by ",
             this.props.brand
           ), !isNaN(this.props.offers) && this.props.offers >= 0 && React.createElement(
             "div",
