@@ -39,7 +39,7 @@ class ProductCard extends React.Component{
           {
             [
               this.props.brand &&
-              <div className="brand" key="brand">by1 {this.props.brand}</div>
+              <div className="brand" key="brand">by {this.props.brand}</div>
               ,
               !isNaN(this.props.offers) && this.props.offers >= 0 &&
               <div className="offers" key="offers"><span className="count">{this.props.offers} offer{this.props.offers <= 1 ? '' : 's'}</span></div>
